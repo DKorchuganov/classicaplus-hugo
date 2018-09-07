@@ -1,0 +1,15 @@
+name:
+  ru: 'Всероссийское музейное объединение музыкальной культуры имени М.И. Глинки'
+  en: 'The Glinka National Museum Consortium of Musical Culture'
+address:
+  ru: 'Москва, ул. Фадеева, д.4 (метро «Маяковская», «Новослободская»)'
+  en: '4 Fadeeva st, Moscow'
+phones:
+  - desc:
+      ru: 'Заказ билетов'
+      en: 'Ticket office'
+    numbers:
+      - call: '+74957396226'
+        print: '(495) 739-62-26'
+      - call: '+74957393987'
+        print: '(495) 739-39-87'

@@ -1,0 +1,13 @@
+priority: 1
+poster_small: natalia.zhukova-small700.jpg
+poster_big: natalia.zhukova-big700.jpg
+name:
+  ru:
+    first: Наталия
+    last: Жукова
+  en:
+    first: Natalia
+    last: Zhukova
+instrument:
+  ru: флейта
+  en: flute

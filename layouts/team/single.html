@@ -1,0 +1,38 @@
+{{ define "css" }}
+  <link href="/resources/css/team/single.css" rel="stylesheet"  type="text/css"/>
+{{ end }}
+{{ define "main" }}
+  <section class="container content-section">
+    <div class="row text-justify main-text">
+      <div class="col-sm-12">
+
+        {{ $member := index .Site.Data.team .File.TranslationBaseName }}
+        {{ $name := index $member.name .Lang }}
+        {{ $instrument := index $member.instrument .Lang }}
+
+        <div class="well hidden-xs">
+          <div class="row">
+            <div class="col-sm-12">
+              <img class="poster-wrap"
+              src="/resources/img{{- strings.TrimPrefix .LanguagePrefix .RelPermalink -}}{{- $member.poster_big -}}"
+              alt="{{ $name.first }} {{ $name.last }} big poster"/>
+              <h3 class="title text-center">{{ $name.first }} {{ $name.last }}</h3>
+              <h4 class="sub-heading text-center">{{ $instrument }}</h4>
+             {{ .Content }}
+            </div>
+          </div>
+        </div>
+
+        <div class="well visible-xs-block">
+          <h3 class="title text-center">{{ $name.first }} {{ $name.last }}</h3>
+          <h4 class="sub-heading text-center">{{ $instrument }}</h4>
+          <img class="img-responsive center-block poster"
+          src="/resources/img{{- strings.TrimPrefix .LanguagePrefix .RelPermalink -}}{{- $member.poster_big -}}"
+          alt="{{ $name.first }} {{ $name.last }} big poster"/>
+          {{ .Content }}
+        </div>
+
+      </div>
+    </div>
+  </section>
+{{ end }}

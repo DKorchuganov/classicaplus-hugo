@@ -1,0 +1,37 @@
+{{ define "css" }}
+  <link href="/resources/css/about/about.css" rel="stylesheet"  type="text/css"/>
+{{ end }}
+{{ define "main" }}
+  <section class="container content-section">
+    <div class="row text-justify main-text">
+      <div class="col-sm-12">
+
+        {{ $poster := "/resources/img/about/about700.jpg" }}
+        {{ $share_buttons_prms := dict "lang" .Lang "title" .Title "desc" .Description }}
+
+        <div class="well hidden-xs">
+          <div class="row">
+            <div class="col-sm-12">
+              <img class="poster-wrap" src="{{ $poster }}" alt="poster"/>
+              {{ .Content }}
+              {{ partial "share_buttons.html" $share_buttons_prms }}
+            </div>
+          </div>
+        </div>
+
+        <div class="well visible-xs-block">
+          <div class="row">
+            <div class="col-sm-8">
+              {{ .Content }}
+              {{ partial "share_buttons.html" $share_buttons_prms }}
+            </div>
+            <div class="col-sm-4 poster">
+              <img class="img-responsive center-block" src="{{ $poster }}" alt="poster"/>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+{{ end }}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+
+<head>
+{{ partial "header.html" . }}
+{{ block "css" . }}
+  <!-- Page CSS -->
+{{ end }}
+</head>
+
+<body>
+  <div id="background"></div>
+  {{ partial "navbar.html" . }}
+  {{ block "main" . }}
+    <!-- Main page content -->
+  {{ end }}
+  {{ partial "footer.html" . }}
+</body>
+
+</html>

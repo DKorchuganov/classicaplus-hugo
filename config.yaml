@@ -1,0 +1,68 @@
+baseURL: http://classicaplus.com
+staticDir: static
+publishDir: ./public
+disableHugoGeneratorInject: true
+sectionPagesMenu: main
+
+params:
+  contacts:
+    email: contact@classicaplus.com
+    vk: https://vk.com/classicaplus
+    facebook: https://www.facebook.com/classicaplus
+    instagram: https://instagram.com/classicaplus
+    youtube: https://www.youtube.com/channel/UCAEhWMfC0Du8V7PGP5wTiow
+    soundcloud: https://soundcloud.com/classicaplus
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+languages:
+  en:
+    languageName: English
+    weight: 2
+    staticDir2: static_en
+    menu:
+      main:
+        - identifier: about
+          name: About
+          url: /about/
+          weight: 1
+        - identifier: team
+          name: Team
+          url: /team/
+          weight: 2
+        - identifier: events
+          name: Events
+          url: /events/
+          weight: 3
+        - identifier: media
+          name: Media
+          url: /media/
+          weight: 4
+    params:
+      brand: Classica.Plus
+      motto: "music for the city"
+  ru:
+    languageName: Русский
+    weight: 1
+    staticDir2: static_ru
+    menu:
+      main:
+        - identifier: about
+          name: "О проекте"
+          url: /about/
+          weight: 1
+        - identifier: team
+          name: Участники
+          url: /team/
+          weight: 2
+        - identifier: events
+          name: События
+          url: /events/
+          weight: 3
+        - identifier: media
+          name: Медиа
+          url: /media/
+          weight: 4
+    params:
+      brand: Классика.Плюс
+      motto: "городской музыкальный проект"

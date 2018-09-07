@@ -1,0 +1,14 @@
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="author" content="Denis Korchuganov"/>
+<meta name="description" content="{{ if .Description }} {{- .Site.Params.brand }} - {{ .Description -}}
+  {{ else }} {{- .Site.Params.brand }} - {{ .Site.Params.motto -}} {{ end }}"/>
+
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}"/>
+{{ end -}}
+
+<link href="/resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+<title>{{ if .Title }} {{- .Site.Params.brand }} - {{ .Title -}} {{else}} {{- .Site.Params.brand -}} {{ end }}</title>

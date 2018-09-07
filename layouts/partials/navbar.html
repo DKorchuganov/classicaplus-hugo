@@ -1,0 +1,50 @@
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand page-scroll" href="{{ "/" | relLangURL }}">
+        <span>{{ .Site.Params.brand }}</span>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse" >
+      <ul class="nav navbar-nav">
+        {{ $context := .}}
+
+        {{- range $item := .Site.Menus.main -}}
+          {{ $lang_url := $item.URL | relLangURL }}
+          {{- if eq (string $context.URL) (string $lang_url) -}}
+            <li class="active">
+              <p class="navbar-text">{{ $item.Name }}</p>
+            </li>
+          {{- else -}}
+            <li>
+              <a href="{{ $lang_url }}">{{ $item.Name }}</a>
+            </li>
+          {{ end }}
+        {{ end }}
+
+        <li class="dropdown lang-selector">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span>{{ .Lang }}</span>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            {{- range $page := .AllTranslations -}}
+              {{- if not (eq $page.Lang $context.Lang) }}
+              <li>
+                <a href="{{ $page.URL }}">{{ $page.Language.LanguageName }}</a>
+              </li>
+              {{ end -}}
+            {{ end }}
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>

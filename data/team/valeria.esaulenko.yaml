@@ -1,0 +1,13 @@
+priority: 3
+poster_small: valeria.esaulenko-small700.jpg
+poster_big: valeria.esaulenko-big700.jpg
+name:
+  ru:
+    first: Валерия
+    last: Есауленко
+  en:
+    first: Valeria
+    last: Esaulenko
+instrument:
+  ru: фортепиано
+  en: fortepiano

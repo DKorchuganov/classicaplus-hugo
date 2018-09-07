@@ -1,0 +1,13 @@
+priority: 2
+poster_small: eugenia.boginskaya-small700.jpg
+poster_big: eugenia.boginskaya-big700.jpg
+name:
+  ru:
+    first: Евгения
+    last: Богинская
+  en:
+    first: Eugenia
+    last: Boginskaya
+instrument:
+  ru: виолончель
+  en: cello

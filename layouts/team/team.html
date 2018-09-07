@@ -1,0 +1,32 @@
+{{ define "css" }}
+  <link href="/resources/css/team/team.css" rel="stylesheet"  type="text/css"/>
+{{ end }}
+{{ define "main" }}
+  <section class="container content-section">
+    <div class="row">
+      {{- $team_page := .Page -}}
+      {{- $lang := .Lang -}}
+      {{- $scratch := newScratch -}}
+      {{ range $member_id, $member := .Site.Data.team }}
+        {{- $scratch.SetInMap "members" $member_id (dict "member_id" $member_id "member" $member) -}}
+      {{ end }}
+      {{ range $member_scr := (where (sort ($scratch.Get "members") "member.priority") "member.priority" "gt" 0) }}
+        <div class="col-sm-4">
+          <div class="well">
+            {{- $member_id := $member_scr.member_id -}}
+            {{- $member := $member_scr.member -}}
+              {{- $name := index $member.name $lang -}}
+              {{ $instrument := index $member.instrument $lang }}
+              <a href="{{ printf "/%s/team/%s" $lang $member_id }}">
+                <h3 class="title text-center">{{ $name.first }} {{ $name.last }}</h3>
+                <h4 class="sub-heading text-center">{{ $instrument }}</h4>
+                <img class="img-responsive poster center-block"
+                  src="{{ printf "/resources/img/team/%s/%s" $member_id $member.poster_small }}"
+                  alt="{{ $name.first }} {{ $name.last }} small poster"/>
+              </a>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

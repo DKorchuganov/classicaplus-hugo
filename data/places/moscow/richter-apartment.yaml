@@ -1,0 +1,15 @@
+name:
+  ru: 'Мемориальная квартира Святослава Рихтера'
+  en: 'Sviatoslav Richter Memorial Apartment'
+address:
+  ru: 'ул. Большая Бронная, дом 2/6, кв. 58, 16-й этаж (метро «Пушкинская», «Тверская», «Арбатская»)'
+  en: 'Bolshaya Bronnaya Street 2/6, Apt. 58, 16th floor'
+phones:
+  - desc:
+      ru: 'Заказ билетов'
+      en: 'Ticket office'
+    numbers:
+      - call: '+74956958346'
+        print: '(495) 695-83-46'
+      - call: '+74956974705'
+        print: '(495) 697-47-05'

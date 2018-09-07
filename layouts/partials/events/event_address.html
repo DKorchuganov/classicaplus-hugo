@@ -1,0 +1,24 @@
+{{- $event := .event -}}
+{{- $lang := .lang -}}
+
+{{- $city := index .places $event.place.city -}}
+{{- $hall := index $city $event.place.hall -}}
+{{- $hall_name := index $hall.name $lang -}}
+{{ $hall_address := index $hall.address $lang }}
+<p class="place">{{ $hall_name }}</p>
+<p class="address">{{ $hall_address }}</p>
+
+{{ if and .print_phones (isset $hall "phones") }}
+  <ul class="phones-inline">
+    {{ range $phone_set := $hall.phones }}
+      <li>
+        <span>{{ index $phone_set.desc $lang }}:</span>
+      </li>
+      {{ range $phone_number := $phone_set.numbers }}
+        <li>
+          <a class="phone" href="{{ $phone_number.call }}">{{ $phone_number.print }}</a>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}

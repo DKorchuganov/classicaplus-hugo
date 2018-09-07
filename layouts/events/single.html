@@ -1,0 +1,99 @@
+{{ define "css" }}
+  <link href="/resources/css/events/single.css" rel="stylesheet"  type="text/css"/>
+{{ end }}
+{{ define "main" }}
+  <section class="container content-section">
+
+    {{ $lang := .Lang }}
+    {{ $event_date := index (split .RelPermalink "/") 3 }}
+    {{ $date_folder := index $.Site.Data.events $event_date }}
+    {{ $event_name := .File.TranslationBaseName }}
+    {{ $event := index $date_folder $event_name }}
+    {{ $event_relpath := (printf "%s/%s" $event_date $event_name) }}
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="well">
+          <div class="row">
+            <div class="col-sm-4 poster">
+              <img class="img-responsive center-block"
+                src="{{ printf "/resources/img/events/%s/%s" $event_relpath $event.poster.big }}"
+                alt="{{ .Description }}"/>
+            </div>
+            <div class="col-sm-8">
+              {{ partial "events/event_datetime.html" (dict "lang" $lang "event" $event "i18n" $.Site.Data.i18n) }}
+
+              <h2 class="title text-center">{{ .Title }}</h2>
+              <div class="content">
+                {{ .Content }}
+              </div>
+
+              {{ if isset $event "performers"}}
+                <h4 class="subsection-heading">{{ index $.Site.Data.i18n.events.performers $lang }}</h4>
+                <ul class="list-unstyled">
+                {{ range $perf_id := $event.performers }}
+                  {{- $performer := index $.Site.Data.team $perf_id -}}
+                  {{- $perf_name := index $performer.name $lang -}}
+                  {{- $perf_inst := index $performer.instrument $lang -}}
+                  <li>{{ printf "%s %s, %s" $perf_name.first $perf_name.last $perf_inst }}</li>
+                {{ end }}
+                </ul>
+              {{ end }}
+
+              {{ if isset $event "programme"}}
+                <h4 class="subsection-heading">{{ index $.Site.Data.i18n.events.programme $lang }}</h4>
+
+                {{ $comp_ids := (apply $event.programme "index" "." "composer" ) | uniq }}
+                {{ $len := (len $comp_ids) }}
+                <p>
+                {{- range $idx, $comp_id := $comp_ids -}}
+                  {{- $composer := index $.Site.Data.composers $comp_id -}}
+                  {{- $comp_name := index $composer.name $lang -}}
+                  {{- if eq (add $idx 1) $len -}}
+                    {{- printf "%s %s" $comp_name.first $comp_name.last -}}
+                  {{- else -}}
+                    {{- printf "%s %s, " $comp_name.first $comp_name.last -}}
+                  {{- end -}}
+                {{- end -}}
+                </p>
+
+                <ol>
+                  {{ range $item := $event.programme }}
+                    {{- $composer := index $.Site.Data.composers $item.composer -}}
+                    {{- $comp_name := index $composer.name $lang -}}
+                    {{- $work := index (index $.Site.Data.works $item.composer) $item.opus -}}
+                    {{- $work_title := index $work.title $lang -}}
+                    <li>{{ printf "%s %s, %s, %s" $comp_name.first $comp_name.last $work_title $work.opus }}</li>
+                  {{ end }}
+                </ol>
+              {{ end }}
+
+              {{ partial "events/event_address.html" (dict "lang" .Lang "event" $event "places" $.Site.Data.places "print_phones" true) }}
+
+              {{ partial "share_buttons.html" (dict "lang" .Lang "title" .Title "desc" .Description) }}
+
+              <!-- DISQUS -->
+              <div id="disqus_thread"></div>
+              <script type="text/javascript" th:inline="javascript">
+                  var disqus_config = function () {
+                      this.page.identifier = {{ strings.TrimPrefix .LanguagePrefix .RelPermalink }};
+                      this.language = {{ .Lang }};
+                  };
+                  (function() {  // DON'T EDIT BELOW THIS LINE
+                      var d = document, s = d.createElement('script');
+
+                      s.src = '//classicaplus.disqus.com/embed.js';
+
+                      s.setAttribute('data-timestamp', +new Date());
+                      (d.head || d.body).appendChild(s);
+                  })();
+              </script>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+{{ end }}
