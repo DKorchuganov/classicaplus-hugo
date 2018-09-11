@@ -12,6 +12,6 @@ fields:
 - type: text
   label: description
   name: description
-  description: Full name to be stored as a personal page description
+  description: A page Description
   config:
     required: true
