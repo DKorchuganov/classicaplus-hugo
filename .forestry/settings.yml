@@ -4,6 +4,8 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: heading
+  label: Team
 - type: directory
   path: content/team
   label: ru content - Team
@@ -12,8 +14,6 @@ sections:
   new_doc_ext: ru.md
   templates:
   - content
-- type: heading
-  label: Team
 - type: directory
   path: content/team
   label: en content - Team
