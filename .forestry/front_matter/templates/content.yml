@@ -6,7 +6,7 @@ fields:
 - type: text
   label: title
   name: title
-  description: Full name to be displayed as a personal page title
+  description: A page Title
   config:
     required: true
 - type: text
