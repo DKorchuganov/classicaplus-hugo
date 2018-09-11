@@ -9,3 +9,9 @@ fields:
   description: Full name to be displayed as a personal page title
   config:
     required: true
+- type: text
+  label: description
+  name: description
+  description: Full name to be stored as a personal page description
+  config:
+    required: true
