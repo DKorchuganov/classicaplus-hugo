@@ -1,0 +1,45 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: 
+webhook_url: 
+sections:
+- type: heading
+  label: Team
+- type: directory
+  path: content/team
+  label: ru content - Team
+  create: all
+  match: "*.*.ru.md"
+  new_doc_ext: ru.md
+  templates:
+  - content
+- type: directory
+  path: content/team
+  label: en content - Team
+  create: all
+  match: "*.*.en.md"
+  new_doc_ext: en.md
+  templates:
+  - content
+- type: directory
+  path: content/about
+  label: About
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/events
+  label: Events
+  create: all
+  match: "**/*"
+- type: directory
+  path: content
+  label: Pages
+  create: all
+  match: "*"
+upload_dir: static/uploads
+public_path: "/uploads"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+version: '0.48'

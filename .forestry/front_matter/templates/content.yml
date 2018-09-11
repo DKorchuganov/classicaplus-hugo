@@ -1,0 +1,17 @@
+---
+label: content
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: title
+  name: title
+  description: A page Title
+  config:
+    required: true
+- type: text
+  label: description
+  name: description
+  description: A page Description
+  config:
+    required: true
