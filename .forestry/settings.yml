@@ -4,6 +4,14 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: directory
+  path: content/team
+  label: ru content - Team
+  create: all
+  match: "*.*.ru.md"
+  new_doc_ext: ".ru.md"
+  templates:
+  - content
 - type: heading
   label: Team
 - type: directory
