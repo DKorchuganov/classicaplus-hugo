@@ -9,7 +9,7 @@ sections:
   label: ru content - Team
   create: all
   match: "*.*.ru.md"
-  new_doc_ext: ".ru.md"
+  new_doc_ext: ru.md
   templates:
   - content
 - type: heading
