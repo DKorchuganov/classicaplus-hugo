@@ -4,6 +4,14 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: heading
+  label: Team
+- type: directory
+  path: content/team
+  label: en content - Team
+  create: all
+  match: "**/*.en.md"
+  new_doc_ext: ".en.md"
 - type: directory
   path: content/about
   label: About
@@ -12,11 +20,6 @@ sections:
 - type: directory
   path: content/events
   label: Events
-  create: all
-  match: "**/*"
-- type: directory
-  path: content/team
-  label: Team
   create: all
   match: "**/*"
 - type: directory
