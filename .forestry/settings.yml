@@ -10,7 +10,7 @@ sections:
   path: content/team
   label: en content - Team
   create: all
-  match: "**/*.en.md"
+  match: "*.*.en.md"
   new_doc_ext: ".en.md"
 - type: directory
   path: content/about
