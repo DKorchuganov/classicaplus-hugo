@@ -11,7 +11,7 @@ sections:
   label: en content - Team
   create: all
   match: "*.*.en.md"
-  new_doc_ext: ".en.md"
+  new_doc_ext: en.md
 - type: directory
   path: content/about
   label: About

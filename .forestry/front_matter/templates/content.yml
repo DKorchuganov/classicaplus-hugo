@@ -1,0 +1,11 @@
+---
+label: content
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: title
+  name: title
+  description: Full name to be displayed as a personal page title
+  config:
+    required: true
