@@ -4,12 +4,11 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: heading
+  label: Team
 - type: document
   path: content/team/_index.ru.md
   label: ru index - Team
-  match: "**/*"
-- type: heading
-  label: Team
 - type: directory
   path: content/team
   label: ru content - Team
