@@ -1,14 +1,17 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
-webhook_url: 
+admin_path:
+webhook_url:
 sections:
 - type: heading
   label: Team
 - type: document
   path: content/team/_index.ru.md
   label: ru index - Team
+- type: document
+  path: content/team/_index.en.md
+  label: en index - Team
 - type: directory
   path: content/team
   label: ru content - Team
