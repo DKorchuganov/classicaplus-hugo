@@ -1,0 +1,6 @@
+{
+    "yaml.format.enable": true,
+    "yaml.schemas": {
+        "./data/schemas/composer.json": "data/composers/*.yaml"
+    }
+}

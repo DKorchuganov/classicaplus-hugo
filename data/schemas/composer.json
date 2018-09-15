@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Composer",
+    "description": "Composer personal data",
+    "type": "object",
+    "properties": {
+        "name": {
+          "description": "Person first, last and full name in different languages",
+          "type": "object"
+        }
+    },
+    "required": [
+        "name"
+    ],
+    "additionalProperties": false
+}
