@@ -6,7 +6,28 @@
     "properties": {
         "name": {
           "description": "Person first, last and full name in different languages",
-          "type": "object"
+          "type": "object",
+          "patternProperties": {
+              "^[a-z]{2}$": {
+                  "type": "object",
+                  "properties": {
+                      "first": {
+                          "type": "string"
+                      },
+                      "last": {
+                          "type": "string"
+                      },
+                      "full": {
+                          "type": "string"
+                      }
+                  },
+                  "required": [
+                      "first", "last", "full"
+                  ],
+                  "additionalProperties": false
+              }
+          },
+          "additionalProperties": false
         }
     },
     "required": [
