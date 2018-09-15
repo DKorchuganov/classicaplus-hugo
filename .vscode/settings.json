@@ -1,6 +1,9 @@
 {
     "yaml.format.enable": true,
     "yaml.schemas": {
-        "./data/schemas/composer.json": "data/composers/*.yaml"
+        "./data/schemas/composer.json": "data/composers/*.yaml",
+        "./data/schemas/team-member.json": "data/team/*.yaml",
+        "./data/schemas/work.json": "data/works/*/*.yaml",
+        "./data/schemas/event.json": "data/events/*/*.yaml"
     }
 }
