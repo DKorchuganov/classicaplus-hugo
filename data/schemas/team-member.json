@@ -11,15 +11,16 @@
         },
         "poster_small": {
             "title": "File name of a small poster",
-            "description": "File name of a small poster to be displayed on the common Team page. The file should be stored under /static/resources/imp/team/<person.id>",
+            "description": "File name of a small poster to be displayed on the common Team page. The file should be stored under /static/resources/img/team/<person.id>",
             "type": "string"
         },
         "poster_big": {
             "title": "File name of a big poster",
-            "description": "File name of a big poster to be displayed on the personal page. The file should be stored under /static/resources/imp/team/<person.id>",
+            "description": "File name of a big poster to be displayed on the personal page. The file should be stored under /static/resources/img/team/<person.id>",
             "type": "string"
         },
         "name": {
+            "title": "Name",
             "description": "Person's first and last names in different languages",
             "type": "object",
             "patternProperties": {
@@ -40,17 +41,17 @@
                 }
             },
             "additionalProperties": false
-          },
-          "instrument": {
-              "title": "Instrument name",
-              "description": "Person's instrument name in different languages",
-              "patternProperties": {
-                  "^[a-z]{2}$": {
-                      "type": "string"
-                  }
-              },
-              "additionalProperties": false
-          }
+        },
+        "instrument": {
+            "title": "Instrument name",
+            "description": "Person's instrument name in different languages",
+            "patternProperties": {
+                "^[a-z]{2}$": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        }
     },
     "required": [
         "priority", "poster_small", "poster_big", "name", "instrument"

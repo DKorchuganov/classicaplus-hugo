@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Work",
+    "description": "Composer's work - a composition, opus",
+    "type": "object",
+    "properties": {
+        "opus": {
+            "title": "Opus",
+            "description": "Opus code",
+            "type": "string"
+        },
+        "title": {
+            "title": "Work title",
+            "description": "Work title in different languages",
+            "patternProperties": {
+                "^[a-z]{2}$": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "date": {
+            "title": "Date",
+            "description": "Different dates assiciated with the work",
+            "type": "object",
+            "properties": {
+                "created": {
+                    "title": "Created",
+                    "description": "Creation date",
+                    "type": "object",
+                    "properties": {
+                        "year": {
+                            "type": "integer",
+                            "minimum": 0
+                        }
+                    },
+                    "required": [
+                        "year"
+                    ]
+                }
+            },
+            "required": [
+                "created"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "opus", "title", "date"
+    ],
+    "additionalProperties": false
+}
