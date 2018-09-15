@@ -1,0 +1,95 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Event",
+    "description": "A musical event",
+    "type": "object",
+    "properties": {
+        "datetime": {
+            "title": "Date-time",
+            "description": "Event date and time in YYYY-MM-DDTHH:mm:00 format",
+            "type": "string",
+            "format": "date-time"
+        },
+        "poster": {
+            "title": "Poster",
+            "description": "File names for the event posters. The files should be stored under /static/resources/img/events/<date>/<event.id>",
+            "type": "object",
+            "properties": {
+                "small": {
+                    "title": "Small",
+                    "description": "Small poster file name to be dispayed on the common Events page",
+                    "type": "string"
+                },
+                "big": {
+                    "title": "Big",
+                    "description": "Big poster file name to be dispayed on the page of this specific event",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "small", "big"
+            ],
+            "additionalProperties": false
+        },
+        "place": {
+            "title": "Place",
+            "description": "Place as city and hall IDs",
+            "type": "object",
+            "properties": {
+                "city": {
+                    "title": "City ID",
+                    "description": "City ID, should match a sub-folder from the data/places folder",
+                    "type": "string"
+                },
+                "hall": {
+                    "title": "Hall ID",
+                    "description": "Hall ID, should match a file name without extension from the data/places/<city.id> folder",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "city", "hall"
+            ],
+            "additionalProperties": false
+        },
+        "performers": {
+            "title": "Performers",
+            "description": "A list of IDs of the event's performers, should match file names from the data/team folder",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        },
+        "programme": {
+            "title": "Programme",
+            "description": "The event programme, a list of composer/opus pairs",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "composer": {
+                        "title": "Composer ID",
+                        "description": "Composer ID, should match a file name without extension from the data/composers folder",
+                        "type": "string"
+                    },
+                    "opus": {
+                        "title": "Opus ID",
+                        "description": "Opus ID, should match a file name without extension from the data/works/<composer.id> folder",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "composer", "opus"
+                ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+    },
+    "required": [
+        "datetime", "poster", "place", "performers", "programme"
+    ],
+    "additionalProperties": false
+}
