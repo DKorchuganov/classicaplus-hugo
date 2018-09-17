@@ -9,15 +9,26 @@
             "description": "Priority for ordering on the Team page, ascedenting. Negative priopity removes from the page",
             "type": "integer"
         },
-        "poster_small": {
-            "title": "File name of a small poster",
-            "description": "File name of a small poster to be displayed on the common Team page. The file should be stored under /static/resources/img/team/<person.id>",
-            "type": "string"
-        },
-        "poster_big": {
-            "title": "File name of a big poster",
-            "description": "File name of a big poster to be displayed on the personal page. The file should be stored under /static/resources/img/team/<person.id>",
-            "type": "string"
+        "poster": {
+            "title": "Poster",
+            "description": "File names for the team member's posters. The files should be stored under /static/resources/img/team/<person.id>",
+            "type": "object",
+            "properties": {
+                "small": {
+                    "title": "Small",
+                    "description": "Small poster file name to be dispayed on the common Team page",
+                    "type": "string"
+                },
+                "big": {
+                    "title": "Big",
+                    "description": "Big poster file name to be dispayed on the page of the person",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "small", "big"
+            ],
+            "additionalProperties": false
         },
         "name": {
             "title": "Name",
@@ -54,7 +65,7 @@
         }
     },
     "required": [
-        "priority", "poster_small", "poster_big", "name", "instrument"
+        "priority", "poster", "name", "instrument"
     ],
     "additionalProperties": false
 }

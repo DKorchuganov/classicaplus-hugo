@@ -1,6 +1,7 @@
 priority: 3
-poster_small: valeria.esaulenko-small700.jpg
-poster_big: valeria.esaulenko-big700.jpg
+poster:
+  small: valeria.esaulenko-small700.jpg
+  big: valeria.esaulenko-big700.jpg
 name:
   ru:
     first: Валерия
