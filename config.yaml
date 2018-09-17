@@ -1,6 +1,7 @@
 baseURL: http://classicaplus.com
 staticDir: static
 publishDir: ./public
+metaDataFormat: "yaml"
 disableHugoGeneratorInject: true
 sectionPagesMenu: main
 
