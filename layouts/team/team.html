@@ -21,7 +21,7 @@
                 <h3 class="title text-center">{{ $name.first }} {{ $name.last }}</h3>
                 <h4 class="sub-heading text-center">{{ $instrument }}</h4>
                 <img class="img-responsive poster center-block"
-                  src="{{ printf "/resources/img/team/%s/%s" $member_id $member.poster_small }}"
+                  src="{{ printf "/resources/img/team/%s/%s" $member_id $member.poster.small }}"
                   alt="{{ $name.first }} {{ $name.last }} small poster"/>
               </a>
           </div>
