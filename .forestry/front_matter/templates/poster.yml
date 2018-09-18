@@ -1,0 +1,11 @@
+---
+label: poster
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  label: Small
+  name: small
+  description: Small poster
+  config:
+    required: true
