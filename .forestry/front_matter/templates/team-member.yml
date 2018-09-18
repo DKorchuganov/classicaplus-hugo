@@ -17,3 +17,13 @@ fields:
   name: poster
   description: Small and Big poster file names
   template: poster
+- type: field_group
+  name: name
+  label: Name
+  description: Person name
+  fields:
+  - type: include
+    label: ru
+    name: ru
+    description: Name in Russian
+    template: name
