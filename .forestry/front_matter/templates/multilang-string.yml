@@ -1,0 +1,13 @@
+---
+label: multilang-string
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  name: ru
+  label: ru
+  description: Russian
+- type: text
+  name: en
+  label: en
+  description: English
