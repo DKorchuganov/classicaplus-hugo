@@ -1,0 +1,21 @@
+---
+label: name
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: first
+  label: First
+  description: First name
+  config:
+    required: true
+- type: text
+  name: last
+  label: Last
+  description: Last name
+  config:
+    required: true
+- type: text
+  name: full
+  label: Full
+  description: Full name
