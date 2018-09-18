@@ -16,4 +16,5 @@ fields:
   config:
     required: true
 pages:
+- content/team/Denis-Korchuganov.en.md
 - content/team/fedor.egorov.ru.md
