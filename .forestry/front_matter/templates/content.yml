@@ -16,4 +16,4 @@ fields:
   config:
     required: true
 pages:
-- content/team/.ru.md
+- content/team/fedor.egorov.ru.md
