@@ -1,0 +1,14 @@
+---
+label: team-member
+hide_body: true
+is_partial: false
+fields:
+- type: number
+  default: "-1"
+  label: Priority
+  name: priority
+  description: Priority for ordering on the Team page, ascending. Negative priority
+    removes from the page
+  config:
+    step: '1'
+    required: true
