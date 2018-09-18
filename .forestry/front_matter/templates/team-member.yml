@@ -12,3 +12,8 @@ fields:
   config:
     step: '1'
     required: true
+- type: include
+  label: Poster
+  name: poster
+  description: Small and Big poster file names
+  template: poster
