@@ -15,3 +15,5 @@ fields:
   description: A page Description
   config:
     required: true
+pages:
+- content/team/denis.korchuganov.en.md
