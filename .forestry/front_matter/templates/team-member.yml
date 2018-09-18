@@ -27,3 +27,8 @@ fields:
     name: ru
     description: Name in Russian
     template: name
+  - type: include
+    name: en
+    label: en
+    description: Name in English
+    template: name
