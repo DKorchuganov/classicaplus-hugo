@@ -38,4 +38,4 @@ fields:
   description: Person's instrument name in different languages
   template: multilang-string
 pages:
-- data/team/denis.korchuganov.yaml.yaml
+- data/team/denis.korchuganov.yaml
