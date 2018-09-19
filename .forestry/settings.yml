@@ -11,7 +11,7 @@ sections:
   label: data - Team
   create: all
   match: "*.yaml"
-  new_doc_ext: ".yaml"
+  new_doc_ext: yaml
   templates:
   - team-member
 - type: directory
@@ -51,8 +51,8 @@ sections:
   label: Pages
   create: all
   match: "*"
-upload_dir: static/uploads
-public_path: "/uploads"
+upload_dir: static/resources/img
+public_path: static/resources/img
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
