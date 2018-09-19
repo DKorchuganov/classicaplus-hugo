@@ -12,11 +12,15 @@ fields:
   config:
     step: '1'
     required: true
-- type: include
-  label: Poster
+- type: field_group
   name: poster
+  label: Poster
   description: Small and Big poster file names
-  template: poster
+  fields:
+  - type: include
+    name: poster
+    label: Poster
+    template: poster
 - type: field_group
   name: name
   label: Name
