@@ -1,0 +1,19 @@
+---
+label: name-fields
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  label: first
+  name: first
+  description: First name
+  config:
+    required: true
+  default: firstname
+- type: text
+  default: lastname
+  label: Last
+  name: last
+  description: Last Name
+  config:
+    required: true
