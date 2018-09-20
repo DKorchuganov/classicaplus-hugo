@@ -9,9 +9,9 @@ fields:
   description: First name
   config:
     required: true
-  default: firstname
+  default: ''
 - type: text
-  default: lastname
+  default: ''
   label: Last
   name: last
   description: Last Name
