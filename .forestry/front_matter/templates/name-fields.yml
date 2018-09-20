@@ -17,3 +17,7 @@ fields:
   description: Last Name
   config:
     required: true
+- type: text
+  label: Full
+  name: full
+  description: Full name
