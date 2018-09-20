@@ -1,0 +1,10 @@
+---
+priority: -1
+name:
+  ru:
+    first: firstname
+    last: lastname
+  en:
+    first: firstname
+    last: lastname
+draft: true

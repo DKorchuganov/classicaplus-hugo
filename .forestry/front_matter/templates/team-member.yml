@@ -25,3 +25,5 @@ fields:
   name: name
   label: Name
   template: name
+pages:
+- data/team/denis.korchuganov.yaml
