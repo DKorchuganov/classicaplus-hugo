@@ -20,3 +20,8 @@ fields:
     name: en
     label: en
     description: Name in English
+    fields:
+    - type: include
+      name: name-fields
+      label: name-fields
+      template: name-fields
