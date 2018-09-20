@@ -2,9 +2,14 @@
 priority: -1
 name:
   ru:
-    first: firstname
-    last: lastname
+    first: Денис
+    last: Корчуганов
+    full: ''
   en:
-    first: firstname
-    last: lastname
+    first: Denis
+    last: Korchuganov
+    full: ''
+poster:
+  small: Denis.Korchuganov.JPG
+  big: Denis.Korchuganov.JPG
 draft: true
