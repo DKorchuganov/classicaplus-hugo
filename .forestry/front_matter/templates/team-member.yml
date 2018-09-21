@@ -1,0 +1,38 @@
+---
+label: team-member
+hide_body: true
+is_partial: false
+fields:
+- type: number
+  default: "-1"
+  label: Priority
+  name: priority
+  description: Priority for ordering on the Team page, ascending. Negative priority
+    removes from the page
+  config:
+    step: '1'
+    required: true
+- type: field_group
+  name: poster
+  label: Poster
+  description: Small and Big poster file names
+  fields:
+  - type: include
+    name: poster
+    label: Poster
+    template: poster
+- type: include
+  name: name
+  label: Name
+  template: name
+- type: field_group
+  name: instrument
+  label: Instrument
+  description: Person's instrument in different languages
+  fields:
+  - type: include
+    template: multilang-string
+    label: Instrument
+    name: instrument
+pages:
+- data/team/denis.korchuganov.yaml

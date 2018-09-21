@@ -6,12 +6,14 @@ webhook_url:
 sections:
 - type: heading
   label: Team
-- type: document
-  path: content/team/_index.ru.md
-  label: ru index - Team
-- type: document
-  path: content/team/_index.en.md
-  label: en index - Team
+- type: directory
+  path: data/team
+  label: data - Team
+  create: all
+  match: "*.yaml"
+  new_doc_ext: yaml
+  templates:
+  - team-member
 - type: directory
   path: content/team
   label: ru content - Team
@@ -28,6 +30,12 @@ sections:
   new_doc_ext: en.md
   templates:
   - content
+- type: document
+  path: content/team/_index.ru.md
+  label: ru index - Team
+- type: document
+  path: content/team/_index.en.md
+  label: en index - Team
 - type: directory
   path: content/about
   label: About
@@ -43,8 +51,8 @@ sections:
   label: Pages
   create: all
   match: "*"
-upload_dir: static/uploads
-public_path: "/uploads"
+upload_dir: static/resources/img
+public_path: static/resources/img
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"

@@ -1,0 +1,27 @@
+---
+label: name
+hide_body: false
+is_partial: false
+fields:
+- type: field_group
+  name: name
+  label: Name
+  description: First, last and optional full name
+  fields:
+  - type: field_group
+    name: ru
+    label: ru
+    description: Name in Russian
+    fields:
+    - type: include
+      template: name-fields
+      name: name-fields
+  - type: field_group
+    name: en
+    label: en
+    description: Name in English
+    fields:
+    - type: include
+      name: name-fields
+      label: name-fields
+      template: name-fields

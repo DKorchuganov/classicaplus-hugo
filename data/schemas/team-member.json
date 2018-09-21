@@ -5,8 +5,8 @@
     "type": "object",
     "properties": {
         "priority": {
-            "title": "Priority for ordering on the Team page",
-            "description": "Priority for ordering on the Team page, ascedenting. Negative priopity removes from the page",
+            "title": "Priority",
+            "description": "Priority for ordering on the Team page, ascending. Negative priority removes from the page",
             "type": "integer"
         },
         "poster": {
@@ -42,6 +42,9 @@
                             "type": "string"
                         },
                         "last": {
+                            "type": "string"
+                        },
+                        "full": {
                             "type": "string"
                         }
                     },
