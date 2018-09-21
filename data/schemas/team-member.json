@@ -43,6 +43,9 @@
                         },
                         "last": {
                             "type": "string"
+                        },
+                        "full": {
+                            "type": "string"
                         }
                     },
                     "required": [
