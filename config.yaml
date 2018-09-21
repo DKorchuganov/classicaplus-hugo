@@ -3,6 +3,7 @@ staticDir: static
 publishDir: ./public
 metaDataFormat: "yaml"
 disableHugoGeneratorInject: true
+disableKinds: [ "RSS" ]
 sectionPagesMenu: main
 
 params:
