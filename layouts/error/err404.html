@@ -1,0 +1,16 @@
+{{ define "css" }}
+  <link href="/resources/css/home.css" rel="stylesheet"  type="text/css"/>
+{{ end }}
+{{ define "main" }}
+  <section class="container content-section">
+    <div class="row main-text">
+      <div class="col-sm-6 col-sm-offset-3">
+        <div class="well">
+          <h1 class="text-center">{{ .Title }}</h1>
+          <h3 class="sub-heading text-center">{{ .Description }}</h3>
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}
