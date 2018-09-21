@@ -25,3 +25,12 @@ fields:
   name: name
   label: Name
   template: name
+- type: field_group
+  name: instrument
+  label: Instrument
+  description: Person's instrument in different languages
+  fields:
+  - type: include
+    template: multilang-string
+    label: Instrument
+    name: instrument
