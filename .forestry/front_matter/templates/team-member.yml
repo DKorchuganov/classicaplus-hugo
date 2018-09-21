@@ -34,3 +34,5 @@ fields:
     template: multilang-string
     label: Instrument
     name: instrument
+pages:
+- data/team/denis.korchuganov.yaml
