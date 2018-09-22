@@ -31,9 +31,6 @@ languages:
           name: Media
           url: /media/
           weight: 4
-    params:
-      brand: Classica.Plus
-      motto: "music for the city"
   ru:
     languageName: Русский
     weight: 1
@@ -56,6 +53,3 @@ languages:
           name: Медиа
           url: /media/
           weight: 4
-    params:
-      brand: Классика.Плюс
-      motto: "городской музыкальный проект"
