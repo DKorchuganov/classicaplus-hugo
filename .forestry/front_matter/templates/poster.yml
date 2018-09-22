@@ -8,10 +8,10 @@ fields:
   name: small
   description: Small poster
   config:
-    required: true
+    required: false
 - type: text
   label: Big
   name: big
   description: Big poster
   config:
-    required: true
+    required: false
