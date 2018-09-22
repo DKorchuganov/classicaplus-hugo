@@ -16,7 +16,7 @@
       </li>
       {{ range $phone_number := $phone_set.numbers }}
         <li>
-          <a class="phone" href="{{ $phone_number.call }}">{{ $phone_number.print }}</a>
+          <a class="phone" href="{{ $phone_number.url }}">{{ $phone_number.disp }}</a>
         </li>
       {{ end }}
     {{ end }}

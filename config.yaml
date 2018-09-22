@@ -3,16 +3,8 @@ staticDir: static
 publishDir: ./public
 metaDataFormat: "yaml"
 disableHugoGeneratorInject: true
+disableKinds: [ "RSS" ]
 sectionPagesMenu: main
-
-params:
-  contacts:
-    email: contact@classicaplus.com
-    vk: https://vk.com/classicaplus
-    facebook: https://www.facebook.com/classicaplus
-    instagram: https://instagram.com/classicaplus
-    youtube: https://www.youtube.com/channel/UCAEhWMfC0Du8V7PGP5wTiow
-    soundcloud: https://soundcloud.com/classicaplus
 
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: true
@@ -20,7 +12,6 @@ languages:
   en:
     languageName: English
     weight: 2
-    staticDir2: static_en
     menu:
       main:
         - identifier: about
@@ -39,13 +30,9 @@ languages:
           name: Media
           url: /media/
           weight: 4
-    params:
-      brand: Classica.Plus
-      motto: "music for the city"
   ru:
     languageName: Русский
     weight: 1
-    staticDir2: static_ru
     menu:
       main:
         - identifier: about
@@ -64,6 +51,3 @@ languages:
           name: Медиа
           url: /media/
           weight: 4
-    params:
-      brand: Классика.Плюс
-      motto: "городской музыкальный проект"

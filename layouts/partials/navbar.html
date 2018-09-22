@@ -4,8 +4,9 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
         <i class="fa fa-bars"></i>
       </button>
+      {{ $brand := index .Site.Data.common.brand .Lang }}
       <a class="navbar-brand page-scroll" href="{{ "/" | relLangURL }}">
-        <span>{{ .Site.Params.brand }}</span>
+        <span>{{ $brand }}</span>
       </a>
     </div>
 

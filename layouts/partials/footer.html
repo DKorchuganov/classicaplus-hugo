@@ -4,10 +4,10 @@
       <div class="col-xs-6">
         <ul class="social-buttons-inline">
           <li>
-            <a href="mailto:{{- .Params.contacts.email -}}" class="btn-social">
+            <a href="mailto:{{- .Site.Data.common.contacts.email.url -}}" class="btn-social">
               <i class="fa fa-envelope"></i>
             </a>
-            <span> {{- .Params.contacts.email -}}</span>
+            <span> {{- index .Site.Data.common.contacts.email.disp .Lang -}}</span>
           </li>
         </ul>
       </div>
