@@ -51,20 +51,20 @@
                         "items": {
                             "type": "object",
                             "properties": {
-                                "call": {
-                                    "title": "Call",
+                                "url": {
+                                    "title": "URL",
                                     "description": "Phone number to call by click",
                                     "type": "string",
                                     "pattern": "^\\+[0-9]+"
                                 },
-                                "print": {
-                                    "title": "Call",
-                                    "description": "Phone number to print on the page",
+                                "disp": {
+                                    "title": "Display",
+                                    "description": "Phone number to display on the page",
                                     "type": "string"
                                 }
                             },
                             "required": [
-                                "call", "print"
+                                "url", "disp"
                             ],
                             "additionalProperties": false
                         },

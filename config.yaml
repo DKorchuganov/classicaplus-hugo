@@ -12,7 +12,6 @@ languages:
   en:
     languageName: English
     weight: 2
-    staticDir2: static_en
     menu:
       main:
         - identifier: about
@@ -31,13 +30,9 @@ languages:
           name: Media
           url: /media/
           weight: 4
-    params:
-      brand: Classica.Plus
-      motto: "music for the city"
   ru:
     languageName: Русский
     weight: 1
-    staticDir2: static_ru
     menu:
       main:
         - identifier: about
@@ -56,6 +51,3 @@ languages:
           name: Медиа
           url: /media/
           weight: 4
-    params:
-      brand: Классика.Плюс
-      motto: "городской музыкальный проект"
