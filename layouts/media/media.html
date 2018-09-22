@@ -9,28 +9,29 @@
           <div class="row">
             <div class="col-sm-6">
               {{ .Content }}
+              {{ $contacts := .Site.Data.common.contacts }}
               <ul class="social-buttons-list">
                 <li>
-                  <a class="btn-social" target="_blank" th:href="${content.youtube_href}">
+                  <a class="btn-social" target="_blank" href="{{ $contacts.youtube.url }}">
                     <i class="fa fa-youtube"></i>
-                  </a><span> </span><span th:utext='${content.youtube_text}'>youtube</span>
+                  </a><span> {{ .Params.youtube }}</span>
                 </li>
                 <li>
-                  <a class="btn-social" target="_blank" th:href="${content.soundcloud_href}">
+                  <a class="btn-social" target="_blank" href="{{ $contacts.soundcloud.url }}">
                     <i class="fa fa-soundcloud"></i>
-                  </a><span> </span><span th:utext='${content.soundcloud_text}'>soundcloud</span>
+                  </a><span> {{ .Params.soundcloud }}</span>
                 </li>
                 <li>
-                  <a class="btn-social" target="_blank" th:href="${content.instagram_href}">
+                  <a class="btn-social" target="_blank" href="{{ $contacts.instagram.url }}">
                     <i class="fa fa-instagram"></i>
-                  </a><span> </span><span th:utext='${content.instagram_text}'>instagram</span>
+                  </a><span> {{ .Params.instagram }}</span>
                 </li>
               </ul>
             </div>
             <div class="col-sm-6 poster">
               <img class="img-responsive center-block"
-              th:src="|/resources/img${content.childDir}${content.poster}|"
-              alt="poster"/>
+                src="/resources/img/media/media700.jpg"
+                alt="Media poster"/>
             </div>
           </div>
         </div>
