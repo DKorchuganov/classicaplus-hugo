@@ -12,7 +12,6 @@ languages:
   en:
     languageName: English
     weight: 2
-    staticDir2: static_en
     menu:
       main:
         - identifier: about
@@ -34,7 +33,6 @@ languages:
   ru:
     languageName: Русский
     weight: 1
-    staticDir2: static_ru
     menu:
       main:
         - identifier: about
