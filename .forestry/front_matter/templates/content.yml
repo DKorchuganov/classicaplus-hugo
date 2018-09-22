@@ -16,4 +16,5 @@ fields:
   config:
     required: true
 pages:
-- content/team/denis.korchuganov.en.md
+- content/404.en.md
+- content/404.ru.md
