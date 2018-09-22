@@ -6,15 +6,6 @@ disableHugoGeneratorInject: true
 disableKinds: [ "RSS" ]
 sectionPagesMenu: main
 
-params:
-  contacts:
-    email: contact@classicaplus.com
-    vk: https://vk.com/classicaplus
-    facebook: https://www.facebook.com/classicaplus
-    instagram: https://instagram.com/classicaplus
-    youtube: https://www.youtube.com/channel/UCAEhWMfC0Du8V7PGP5wTiow
-    soundcloud: https://soundcloud.com/classicaplus
-
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: true
 languages:

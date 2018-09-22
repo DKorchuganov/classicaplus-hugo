@@ -1,0 +1,40 @@
+{{ define "css" }}
+  <link href="/resources/css/about/about.css" rel="stylesheet"  type="text/css"/>
+{{ end }}
+{{ define "main" }}
+  <section class="container content-section">
+    <div class="row text-justify main-text">
+      <div class="col-lg-12">
+        <div class="well">
+          <div class="row">
+            <div class="col-sm-6">
+              {{ .Content }}
+              <ul class="social-buttons-list">
+                <li>
+                  <a class="btn-social" target="_blank" th:href="${content.youtube_href}">
+                    <i class="fa fa-youtube"></i>
+                  </a><span> </span><span th:utext='${content.youtube_text}'>youtube</span>
+                </li>
+                <li>
+                  <a class="btn-social" target="_blank" th:href="${content.soundcloud_href}">
+                    <i class="fa fa-soundcloud"></i>
+                  </a><span> </span><span th:utext='${content.soundcloud_text}'>soundcloud</span>
+                </li>
+                <li>
+                  <a class="btn-social" target="_blank" th:href="${content.instagram_href}">
+                    <i class="fa fa-instagram"></i>
+                  </a><span> </span><span th:utext='${content.instagram_text}'>instagram</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-6 poster">
+              <img class="img-responsive center-block"
+              th:src="|/resources/img${content.childDir}${content.poster}|"
+              alt="poster"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}
