@@ -1,3 +1,18 @@
 ---
 priority: -1
+poster:
+  small: ''
+  big: ''
+name:
+  ru:
+    first: Федор
+    last: Егоров
+    full: ''
+  en:
+    first: Fedor
+    last: Egorov
+    full: ''
+instrument:
+  ru: гобой
+  en: oboe
 draft: true
