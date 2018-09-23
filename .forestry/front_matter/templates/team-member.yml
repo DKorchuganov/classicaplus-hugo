@@ -35,4 +35,5 @@ fields:
     label: Instrument
     name: instrument
 pages:
+- data/team/fedor.egorov.yaml
 - data/team/denis.korchuganov.yaml
