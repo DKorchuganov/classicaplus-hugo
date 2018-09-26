@@ -68,7 +68,7 @@
         }
     },
     "required": [
-        "priority", "poster", "name", "instrument"
+        "priority", "name", "instrument"
     ],
     "additionalProperties": false
 }
