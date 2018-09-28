@@ -35,7 +35,15 @@
                   {{- $performer := index $.Site.Data.team $perf_id -}}
                   {{- $perf_name := index $performer.name $lang -}}
                   {{- $perf_inst := index $performer.instrument $lang -}}
-                  <li>{{ printf "%s %s, %s" $perf_name.first $perf_name.last $perf_inst }}</li>
+                  {{- if gt $performer.priority 0 -}}
+                    <li>
+                      <a href="{{ printf "/%s/team/%s" $lang $perf_id }}">
+                        {{- printf "%s %s, %s" $perf_name.first $perf_name.last $perf_inst -}}
+                      </a>
+                    </li>                    
+                  {{ else }}                  
+                    <li>{{ printf "%s %s, %s" $perf_name.first $perf_name.last $perf_inst }}</li>
+                  {{ end }}
                 {{ end }}
                 </ul>
               {{ end }}

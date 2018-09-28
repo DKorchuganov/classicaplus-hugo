@@ -6831,6 +6831,9 @@ div.content > p {
   text-align: justify;
   font-size: 16px;
 }
+li a {
+  color: #a94442;
+}
 .place {
   margin-top: 30px;
   font-family: 'fira_sanssemibold', sans-serif;
