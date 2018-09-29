@@ -39,6 +39,14 @@ sections:
 - type: heading
   label: Composers and Works
 - type: directory
+  path: data/team
+  label: data - Composers
+  create: all
+  match: "*.yaml"
+  new_doc_ext: yaml
+  templates:
+  - composer
+- type: directory
   path: content/about
   label: About
   create: all
