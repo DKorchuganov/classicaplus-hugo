@@ -39,7 +39,7 @@ The below sections describe how to add/edit content of diffrent types.
 4. Add `name` section with multiple language code sub-sections like `ru` and `en`. In each sub-section add `first` and `last` fields for the firsname and lastname respectively
 5. Add `instrument` section for the person's instrument names in different languages, names are given in fields with respective languge codes like `ru` and `en`
 
-Example:
+**Team member data file example:**
 
 ```yaml
 priority: 2
@@ -65,7 +65,7 @@ Content files are mandatory for team members which are published on the common t
 1. Go to `content/team` folder and create a condent file with `firstname.lastname.ru.md` filename format for content in Russian language, and similar files for other language codes
 2. Add YAML front-matter with `title` and `description` fields, separated by lines with triple dash, see the below example
 
-Team member content file example:
+**Team member content file example:**
 
 ```markdown
 ---
