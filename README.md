@@ -8,7 +8,9 @@ This project is in Work in progress status, the current production site is creat
 - [Content editing](#content-editing)
   - [Adding a team member](#adding-a-team-member)
     - [Team member data file](#team-member-data-file)
-  - [Team member content file](#team-member-content-file)
+    - [Team member content file](#team-member-content-file)
+  - [Adding a composer](#adding-a-composer)
+    - [Composer member data file](#composer-member-data-file)
 
 ## Initial setup
 
@@ -31,6 +33,8 @@ The below sections describe how to add/edit content of diffrent types.
 
 ### Adding a team member
 
+All performers mentioned in evens should be added as team members. They could have a separate team member pages on the side, and could be mentioned on the common team page, which is controlled by `priority` filed in a team member data file, see below. Create a team member data file first, then create content files, if required.
+
 #### Team member data file
 
 1. Go to `data/team` folder and create a file with `firstname.lastname.yaml` filename format
@@ -40,6 +44,7 @@ The below sections describe how to add/edit content of diffrent types.
 5. Add `instrument` section for the person's instrument names in different languages, names are given in fields with respective languge codes like `ru` and `en`
 
 **Team member data file example:**
+`data/team/eugenia.boginskaya.yaml`
 
 ```yaml
 priority: 2
@@ -58,7 +63,7 @@ instrument:
   en: cello
 ```
 
-### Team member content file
+#### Team member content file
 
 Content files are mandatory for team members which are published on the common team page (with positive priority field, see above in [Team member data file](#team-member-data-file) section). Content files of team members with negative priority are still used to create and individual member page, but this page is not referenced on the common team page.
 
@@ -66,6 +71,7 @@ Content files are mandatory for team members which are published on the common t
 2. Add YAML front-matter with `title` and `description` fields, separated by lines with triple dash, see the below example
 
 **Team member content file example:**
+`content/team/eugenia.boginskaya.en.md`
 
 ```markdown
 ---
@@ -74,3 +80,7 @@ description: "Eugenia Boginskaya, cello"
 ---
 A few words from Eugenia
 ```
+
+### Adding a composer
+
+#### Composer member data file
