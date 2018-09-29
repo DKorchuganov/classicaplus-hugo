@@ -70,7 +70,7 @@ Content files are mandatory for team members which are published on the common t
 ```markdown
 ---
 title: "Eugenia Boginskaya"
-description: "Eugenia Boginskaya"
+description: "Eugenia Boginskaya, cello"
 ---
 A few words from Eugenia
 ```
