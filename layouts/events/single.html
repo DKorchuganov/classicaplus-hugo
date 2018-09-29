@@ -71,7 +71,13 @@
                     {{- $comp_name := index $composer.name $lang -}}
                     {{- $work := index (index $.Site.Data.works $item.composer) $item.opus -}}
                     {{- $work_title := index $work.title $lang -}}
-                    <li>{{ printf "%s %s, %s, %s" $comp_name.first $comp_name.last $work_title $work.opus }}</li>
+                    {{- if isset $work "date" -}}
+                      {{- if isset $work.date "created" -}}
+                      <li>{{ printf "%s %s, %s, %s (%d)" $comp_name.first $comp_name.last $work_title $work.opus $work.date.created.year }}</li>
+                      {{- end -}}
+                    {{- else -}}
+                      <li>{{ printf "%s %s, %s, %s" $comp_name.first $comp_name.last $work_title $work.opus }}</li>
+                    {{- end -}}
                   {{ end }}
                 </ol>
               {{ end }}
