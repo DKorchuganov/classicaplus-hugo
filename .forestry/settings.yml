@@ -39,7 +39,7 @@ sections:
 - type: heading
   label: Composers and Works
 - type: directory
-  path: data/team
+  path: data/composers
   label: data - Composers
   create: all
   match: "*.yaml"
