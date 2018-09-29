@@ -8,6 +8,7 @@ This project is in Work in progress status, the current production site is creat
 - [Content editing](#content-editing)
   - [Adding a team member](#adding-a-team-member)
     - [Team member data file](#team-member-data-file)
+  - [Team member content file](#team-member-content-file)
 
 ## Initial setup
 
@@ -21,8 +22,55 @@ List of optional VS Code extensions for a comfortable work:
 
 ## Content editing
 
+Site content consits of 2 major parts: data files in `data` folder and content files in `content` folder. Data files use YAML format, content files are in markdown format with YAML front-matter. The site is multilingual (currently in english and Rissian), which is supported by:
+
+- two language version of the each content file with different language code extensions like `.ru.md` and `.en.md`
+- language-specific sub-sections in YAML data files
+
+The below sections describe how to add/edit content of diffrent types.
+
 ### Adding a team member
 
 #### Team member data file
 
-Go to  
+1. Go to `data/team` folder and create a file with `firstname.lastname.yaml` filename format
+2. Add `priority` field, a positive value defines a position of a team member on the common team page (ordered from lowest to highest), put a negative value to exclude a person from the team page
+3. Add `poster` section with `small` and `big` fields for poster file names. `small` poster is displayed on the common team page, `big` poster on an individual page of a team member. `poster` section is optional for persons with negative `priority` (see above)
+4. Add `name` section with multiple language code sub-sections like `ru` and `en`. In each sub-section add `first` and `last` fields for the firsname and lastname respectively
+5. Add `instrument` section for the person's instrument names in different languages, names are given in fields with respective languge codes like `ru` and `en`
+
+Example:
+
+```yaml
+priority: 2
+poster:
+  small: eugenia.boginskaya-small700.jpg
+  big: eugenia.boginskaya-big700.jpg
+name:
+  ru:
+    first: Евгения
+    last: Богинская
+  en:
+    first: Eugenia
+    last: Boginskaya
+instrument:
+  ru: виолончель
+  en: cello
+```
+
+### Team member content file
+
+Content files are mandatory for team members which are published on the common team page (with positive priority field, see above in [Team member data file](#team-member-data-file) section). Content files of team members with negative priority are still used to create and individual member page, but this page is not referenced on the common team page.
+
+1. Go to `content/team` folder and create a condent file with `firstname.lastname.ru.md` filename format for content in Russian language, and similar files for other language codes
+2. Add YAML front-matter with `title` and `description` fields, separated by lines with triple dash, see the below example
+
+Team member content file example:
+
+```markdown
+---
+title: "Eugenia Boginskaya"
+description: "Eugenia Boginskaya"
+---
+A few words from Eugenia
+```
