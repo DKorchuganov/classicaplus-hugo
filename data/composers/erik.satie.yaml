@@ -1,2 +1,11 @@
 ---
+name:
+  ru:
+    first: Эрик
+    last: Сати
+    full: Эрик-Альфред-Лесли Сати
+  en:
+    first: Erik
+    last: Satie
+    full: Erik Alfred Leslie Satie
 draft: true
