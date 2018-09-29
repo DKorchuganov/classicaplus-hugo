@@ -1,0 +1,30 @@
+---
+label: composers
+hide_body: false
+is_partial: false
+fields:
+- type: field_group
+  name: name
+  label: name
+  description: Person's name
+  fields:
+  - type: field_group
+    name: ru
+    label: ru
+    description: Name in Russian
+    fields:
+    - type: include
+      label: ru-namefields
+      name: ru-namefields
+      description: Name fields in Russian
+      template: name-fields
+  - type: field_group
+    name: en
+    label: en
+    description: Name in English
+    fields:
+    - type: include
+      name: en-namefields
+      label: en-namefields
+      description: Name fields in English
+      template: name-fields
