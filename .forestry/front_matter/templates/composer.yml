@@ -1,9 +1,11 @@
 ---
 label: composer
-hide_body: false
+hide_body: true
 is_partial: false
 fields:
 - type: include
   name: name
   label: Name
   template: name
+pages:
+- data/composers/erik.satie.yaml

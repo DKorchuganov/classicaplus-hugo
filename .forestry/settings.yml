@@ -47,6 +47,14 @@ sections:
   templates:
   - composer
 - type: directory
+  path: data/works
+  label: data - Works
+  create: all
+  match: "*.*/*.yaml"
+  new_doc_ext: yaml
+  templates:
+  - work
+- type: directory
   path: content/about
   label: About
   create: all

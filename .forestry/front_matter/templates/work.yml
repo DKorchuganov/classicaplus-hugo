@@ -1,0 +1,40 @@
+---
+label: work
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  label: Opus
+  name: opus
+  description: Opus ID
+  config:
+    required: true
+- type: field_group
+  name: title
+  label: Title
+  description: Work title in different languages
+  fields:
+  - type: include
+    template: multilang-string
+    label: Title
+    name: title
+- type: field_group
+  name: date
+  label: Date
+  description: Dates related to the work
+  fields:
+  - type: field_group
+    name: created
+    label: Created
+    description: The work creation date
+    fields:
+    - type: number
+      label: Year
+      name: year
+      description: Creation year
+      config:
+        min: '0'
+        step: '1'
+        required: true
+pages:
+- data/works/erik.satie/op.1920.lbe.yaml
