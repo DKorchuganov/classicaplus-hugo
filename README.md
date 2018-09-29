@@ -1,6 +1,6 @@
 # classicaplus-hugo <!-- omit in toc -->
 
-[Hugo](https://gohugo.io) source of [classicaplus.com](http://classicaplus.com) website.
+[Hugo](https://gohugo.io) source of the [classicaplus.com](http://classicaplus.com) website.
 
 This project is in Work in progress status, the current production site is created using another static site generator.
 
@@ -10,7 +10,7 @@ This project is in Work in progress status, the current production site is creat
     - [Team member data file](#team-member-data-file)
     - [Team member content file](#team-member-content-file)
   - [Adding a composer](#adding-a-composer)
-    - [Composer member data file](#composer-member-data-file)
+    - [Composer data file](#composer-data-file)
 
 ## Initial setup
 
@@ -39,7 +39,7 @@ All performers mentioned in evens should be added as team members. They could ha
 
 1. Go to `data/team` folder and create a file with `firstname.lastname.yaml` filename format
 2. Add `priority` field, a positive value defines a position of a team member on the common team page (ordered from lowest to highest), put a negative value to exclude a person from the team page
-3. Add `poster` section with `small` and `big` fields for poster file names. `small` poster is displayed on the common team page, `big` poster on an individual page of a team member. `poster` section is optional for persons with negative `priority` (see above)
+3. Add `poster` section with `small` and `big` fields for poster file names. `small` poster is displayed on the common team page, `big` poster on an individual page of a team member. `poster` section is optional for persons with negative `priority`, see above. Poster files should be stored in `static/resources/img/team/firstname.lastname` folder of a specific team member.
 4. Add `name` section with multiple language code sub-sections like `ru` and `en`. In each sub-section add `first` and `last` fields for the firsname and lastname respectively
 5. Add `instrument` section for the person's instrument names in different languages, names are given in fields with respective languge codes like `ru` and `en`
 
@@ -83,4 +83,6 @@ A few words from Eugenia
 
 ### Adding a composer
 
-#### Composer member data file
+All composers used in event's programs should be described in data files in `data/composers` folder. There is no content files for composers at the moment, but they might be added in the future.
+
+#### Composer data file
