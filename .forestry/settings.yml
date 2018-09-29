@@ -36,6 +36,8 @@ sections:
 - type: document
   path: content/team/_index.en.md
   label: en index - Team
+- type: heading
+  label: Composers and Works
 - type: directory
   path: content/about
   label: About
