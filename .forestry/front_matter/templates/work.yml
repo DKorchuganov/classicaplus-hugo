@@ -36,3 +36,5 @@ fields:
         min: '0'
         step: '1'
         required: true
+pages:
+- data/works/erik.satie/op.1920.lbe.yaml
