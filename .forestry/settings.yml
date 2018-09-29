@@ -50,7 +50,7 @@ sections:
   path: data/works
   label: data - Works
   create: all
-  match: "**/*.yaml"
+  match: "*.*/*.yaml"
   new_doc_ext: yaml
   templates:
   - work
