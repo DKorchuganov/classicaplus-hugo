@@ -1,0 +1,9 @@
+---
+label: composers
+hide_body: false
+is_partial: false
+fields:
+- type: include
+  name: name
+  label: Name
+  template: name
