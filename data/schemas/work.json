@@ -40,13 +40,13 @@
                 }
             },
             "required": [
-                "created"
+               
             ],
             "additionalProperties": false
         }
     },
     "required": [
-        "opus", "title", "date"
+        "opus", "title"
     ],
     "additionalProperties": false
 }
