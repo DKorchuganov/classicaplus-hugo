@@ -11,6 +11,8 @@ This project is in Work in progress status, the current production site is creat
     - [Team member content file](#team-member-content-file)
   - [Adding a composer](#adding-a-composer)
     - [Composer data file](#composer-data-file)
+  - [Adding a composer's work](#adding-a-composers-work)
+    - [Work data file](#work-data-file)
 
 ## Initial setup
 
@@ -103,4 +105,29 @@ name:
     first: Alberto
     last: Ginastera
     full: Alberto Evaristo Ginastera
+```
+
+### Adding a composer's work
+
+All compositions used in event's programs should be described in data files in `data/works` folder. Works (aka compositions) are stored in sub-foldes named according to corresponding composer's name. There is no content files for works at the moment, but they might be added in the future.
+
+#### Work data file
+
+1. Go to `data/works/firstname.lastname` folder (where `firstname.lastname` belongs to the respective composer) and create a file with `opus.id.yaml` filename format, where `opus.id` is a composition identificator, so called "opus number" (see below).
+2. Add `opus` field with the work's opus number, which in most cases should match data file name without `.yaml` extension. Each composer has his own opus numbering, you can refer to a corresponding [Wikipedia article](https://en.wikipedia.org/wiki/Alberto_Ginastera) or to a list of works published by [International Music Score Library Project](https://imslp.org). The following points shoud be taken into account:
+   - some composers like [Johann Sebastian Bach](https://imslp.org/wiki/List_of_works_by_Johann_Sebastian_Bach) have several opus numbering systems. In this case just use anyone you like and use consistently. Prepend an opus number by the corresponding code of the opus numbering system, separated by dot, for example: `bwv.846`
+   - if the opus numbers have only digits and the numbering system does not have any special name, just prepend the opus number with "op" letters, for example `Op.22`
+   - if a composer doesn't have any opus numbering system, then...
+
+**Work data file example:**
+`data/works/alberto.ginastera/op.22.yaml`
+
+```yaml
+opus: op.22
+title:
+  ru: 'Соната №1 для фортепиано'
+  en: 'Piano Sonata No.1'
+date:
+  created:
+    year: 1952
 ```
