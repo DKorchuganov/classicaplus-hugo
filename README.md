@@ -14,7 +14,7 @@ This project is in Work in progress status, the current production site is creat
 
 ## Initial setup
 
-The best way to edit/create the site content on a local PC is to use [VS Code](https://code.visualstudio.com), an open-source code editor from Microsoft. It has validation capabilities for YAML data files using JSON schema, and the project contains relevant schema files and the .vscode folder with corresponding project settings.
+The best way to edit/create the site content on a local PC is to use [VS Code](https://code.visualstudio.com), an open-source code editor from Microsoft. It has validation capabilities for YAML data files using JSON schema, and the project contains relevant schema files as well as the .vscode folder with corresponding project settings.
 
 List of optional VS Code extensions for a comfortable work:
 
@@ -86,3 +86,21 @@ A few words from Eugenia
 All composers used in event's programs should be described in data files in `data/composers` folder. There is no content files for composers at the moment, but they might be added in the future.
 
 #### Composer data file
+
+1. Go to `data/composers` folder and create a file with `firstname.lastname.yaml` filename format
+2. Add `name` section with multiple language code sub-sections like `ru` and `en`. In each sub-section add `first`, `last` and `full` fields for the firsname, lastname and fullname respectively
+
+**Composer data file example:**
+`data/composers/alberto.ginastera.yaml`
+
+```yaml
+name:
+  ru:
+    first: Альберто
+    last: Хинастера
+    full: Альберто Эваристо Хинастера
+  en:
+    first: Alberto
+    last: Ginastera
+    full: Alberto Evaristo Ginastera
+```
