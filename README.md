@@ -6,13 +6,15 @@ This project is in Work in progress status, the current production site is creat
 
 - [Initial setup](#initial-setup)
 - [Content editing](#content-editing)
-  - [Adding a team member](#adding-a-team-member)
+  - [Team members](#team-members)
     - [Team member data file](#team-member-data-file)
     - [Team member content file](#team-member-content-file)
-  - [Adding a composer](#adding-a-composer)
+  - [Composers](#composers)
     - [Composer data file](#composer-data-file)
-  - [Adding a composer's work](#adding-a-composers-work)
+  - [Composer's works](#composers-works)
     - [Work data file](#work-data-file)
+  - [Places](#places)
+    - [Place data file](#place-data-file)
 
 ## Initial setup
 
@@ -33,7 +35,7 @@ Site content consits of 2 major parts: data files in `data` folder and content f
 
 The below sections describe how to add/edit content of diffrent types.
 
-### Adding a team member
+### Team members
 
 All performers mentioned in evens should be added as team members. They could have a separate team member pages on the side, and could be mentioned on the common team page, which is controlled by `priority` filed in a team member data file, see below. Create a team member data file first, then create content files, if required.
 
@@ -83,9 +85,9 @@ description: "Eugenia Boginskaya, cello"
 A few words from Eugenia
 ```
 
-### Adding a composer
+### Composers
 
-All composers used in event's programs should be described in data files in `data/composers` folder. There is no content files for composers at the moment, but they might be added in the future.
+All composers used in event's programs should be described in data files in `data/composers` folder. There are no content files for composers at the moment, but they might be added in the future.
 
 #### Composer data file
 
@@ -107,9 +109,9 @@ name:
     full: Alberto Evaristo Ginastera
 ```
 
-### Adding a composer's work
+### Composer's works
 
-All compositions used in event's programs should be described in data files in `data/works` folder. Works (aka compositions) are stored in sub-foldes named according to corresponding composer's name. There is no content files for works at the moment, but they might be added in the future.
+All compositions used in event's programs should be described in data files in `data/works` folder. Works (aka compositions) are stored in sub-foldes named according to corresponding composer's name. There are no content files for works at the moment, but they might be added in the future.
 
 #### Work data file
 
@@ -117,7 +119,7 @@ All compositions used in event's programs should be described in data files in `
    - some composers like [Johann Sebastian Bach](https://imslp.org/wiki/List_of_works_by_Johann_Sebastian_Bach) have several opus numbering systems. In this case just use anyone you like and use consistently. Prepend an opus number by the corresponding code of the opus numbering system *in lower case*, separated by dot, for example: `bwv.846.yaml`
    - if the opus numbers have only digits and the numbering system does not have any special name, just prepend the digital opus number with "op" letters, for example `op.22.yaml`
    - if a composer doesn't have any opus numbering system, then some meaningful id should be created. For example, it could look like `op.1920.lbe.yaml`, where `op` is just a common prefix, `1920` is the work creation year, and `lbe` is an abbreviated work name
-2. Add `opus` field with the work's opus number, which in most cases should match data file name without `.yaml` extension. It will be used on events pages in concert programs, so it might have upper case letters and spaces. This field is optional, so if a work doesn't have a real opus id like in the case of `op.1920.lbe.yaml` from the above example, the `opus` field can be skipped.
+2. Add `opus` field with the work opus number, which in most cases should match data file name without `.yaml` extension. It will be used on events pages in concert programs, so it might have upper case letters and spaces. This field is optional, so if a work doesn't have a real opus id like in the case of `op.1920.lbe.yaml` from the above example, the `opus` field can be skipped.
 3. Add `title` section for the work's title in different languages, titles are given in fields with respective languge codes like `ru` and `en`
 4. Add `date` section. It's supposed to have different dates assiciated with the work, but the only creation date is supported at the moment, see the below example for the details. The `date` section is optional, but once it present, the `year` field is mandatory in the `created` sub-section.
 
@@ -132,4 +134,36 @@ title:
 date:
   created:
     year: 1952
+```
+
+### Places
+
+All places for events like concert halls etc should be described in data files in `data/places` folder. There are no content files for places at the moment, but they might be added in the future.
+
+#### Place data file
+
+1. Go to `data/places` folder, into a sub-folder of a corresponding city (`data/places/moscow`, for example. Just create a sub-folder for a city if it doesn't exist yet), and create a file with `place-name.yaml` filename format
+2. Add `name` section for the place name in different languages, names are given in fields with respective languge codes like `ru` and `en`
+3. Add `address` section for the place address in different languages, addresses are given in fields with respective languge codes like `ru` and `en`
+4. Add an optional `phones` section, which contains a list of different phone cotact numbers of the place. Each element of the list has a complex structure given in the below example. It allows to publish different sets of phone numbers for different purposes, like general inquiries, ticket office etc. In the below example the only one set of phone numbers is given, for the ticket office.
+
+**Place data file example:**
+`data/places/moscow/glinks-museum.yaml`
+
+```yaml
+name:
+  ru: 'Всероссийское музейное объединение музыкальной культуры имени М.И. Глинки'
+  en: 'The Glinka National Museum Consortium of Musical Culture'
+address:
+  ru: 'Москва, ул. Фадеева, д.4 (метро «Маяковская», «Новослободская»)'
+  en: '4 Fadeeva st, Moscow'
+phones:
+  - desc:
+      ru: 'Заказ билетов'
+      en: 'Ticket office'
+    numbers:
+      - url: '+74957396226'
+        disp: '(495) 739-62-26'
+      - url: '+74957393987'
+        disp: '(495) 739-39-87'
 ```
