@@ -74,14 +74,14 @@
                         "description": "Composer ID, should match a file name without extension from the data/composers folder",
                         "type": "string"
                     },
-                    "opus": {
-                        "title": "Opus ID",
-                        "description": "Opus ID, should match a file name without extension from the data/works/<composer.id> folder",
+                    "work": {
+                        "title": "Work ID",
+                        "description": "Work ID, should match a file name without extension from the data/works/<composer.id> folder",
                         "type": "string"
                     }
                 },
                 "required": [
-                    "composer", "opus"
+                    "composer", "work"
                 ]
             },
             "minItems": 1,
