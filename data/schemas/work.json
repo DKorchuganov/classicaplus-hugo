@@ -6,7 +6,7 @@
     "properties": {
         "opus": {
             "title": "Opus",
-            "description": "Opus code",
+            "description": "Opus code to display",
             "type": "string"
         },
         "title": {
@@ -46,7 +46,7 @@
         }
     },
     "required": [
-        "opus", "title"
+       "title"
     ],
     "additionalProperties": false
 }
