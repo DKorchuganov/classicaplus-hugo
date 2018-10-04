@@ -18,3 +18,11 @@ fields:
   label: Place
   name: place
   description: Place reference
+  fields:
+  - type: text
+    name: city
+    label: City
+    description: City name in lower case
+    config:
+      required: true
+    default: moscow
