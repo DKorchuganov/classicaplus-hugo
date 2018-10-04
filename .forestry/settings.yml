@@ -54,14 +54,11 @@ sections:
   new_doc_ext: yaml
   templates:
   - work
+- type: heading
+  label: Events
 - type: directory
   path: content/about
   label: About
-  create: all
-  match: "**/*"
-- type: directory
-  path: content/events
-  label: Events
   create: all
   match: "**/*"
 - type: directory
