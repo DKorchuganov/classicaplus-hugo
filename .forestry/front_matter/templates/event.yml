@@ -11,7 +11,7 @@ fields:
     required: true
     display_utc: true
     date_format: DD-MM-YYYY
-    time_format: hh:mm
+    time_format: HH:mm
 - type: field_group
   name: poster
   label: Poster
