@@ -61,3 +61,6 @@ fields:
     name: composer
     config:
       required: true
+  - type: text
+    name: work
+    label: Work
