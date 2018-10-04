@@ -55,7 +55,7 @@ sections:
   templates:
   - work
 - type: heading
-  label: Events
+  label: Places and Events
 - type: directory
   path: content/about
   label: About
