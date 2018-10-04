@@ -55,3 +55,9 @@ fields:
   description: List of IDs of composers and works
   config:
     min: '1'
+  fields:
+  - type: text
+    label: Composer
+    name: composer
+    config:
+      required: true
