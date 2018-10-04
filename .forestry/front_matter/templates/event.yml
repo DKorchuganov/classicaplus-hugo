@@ -9,6 +9,16 @@ fields:
   description: Event date and time in ISO format
   config:
     required: true
+    display_utc: true
+- type: field_group
+  name: poster
+  label: Poster
+  description: Poster file names
+  fields:
+  - type: include
+    name: poster
+    label: Poster
+    template: poster
 - type: field_group
   label: Place
   name: place
@@ -37,12 +47,3 @@ fields:
     source:
       type: documents
       section: data-team
-- type: field_group
-  name: poster
-  label: Poster
-  description: Poster file names
-  fields:
-  - type: include
-    name: poster
-    label: Poster
-    template: poster
