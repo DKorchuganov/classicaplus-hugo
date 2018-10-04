@@ -14,3 +14,7 @@ fields:
   label: Poster
   description: Poster of the event
   template: poster
+- type: field_group
+  label: Place
+  name: place
+  description: Place reference
