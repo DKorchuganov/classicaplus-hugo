@@ -1,0 +1,11 @@
+---
+label: event
+hide_body: true
+is_partial: false
+fields:
+- type: datetime
+  label: DateTime
+  name: datetime
+  description: Event date and time in ISO format
+  config:
+    required: true
