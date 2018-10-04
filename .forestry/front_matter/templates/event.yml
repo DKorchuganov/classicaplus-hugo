@@ -10,6 +10,8 @@ fields:
   config:
     required: true
     display_utc: true
+    date_format: DD-MM-YYYY
+    time_format: hh:mm
 - type: field_group
   name: poster
   label: Poster
