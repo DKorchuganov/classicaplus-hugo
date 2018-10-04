@@ -57,6 +57,14 @@ sections:
 - type: heading
   label: Places and Events
 - type: directory
+  path: data/events
+  label: data - Events
+  create: all
+  match: "**/*.yaml"
+  new_doc_ext: ".yaml"
+  templates:
+  - event
+- type: directory
   path: content/about
   label: About
   create: all
