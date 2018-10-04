@@ -61,7 +61,7 @@ sections:
   label: data - Events
   create: all
   match: "**/*.yaml"
-  new_doc_ext: ".yaml"
+  new_doc_ext: yaml
   templates:
   - event
 - type: directory
