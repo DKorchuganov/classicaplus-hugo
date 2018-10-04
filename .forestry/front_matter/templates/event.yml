@@ -49,3 +49,9 @@ fields:
     source:
       type: pages
       section: data-team
+- type: field_group_list
+  label: Programme
+  name: programme
+  description: List of IDs of composers and works
+  config:
+    min: '1'
