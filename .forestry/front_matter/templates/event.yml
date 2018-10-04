@@ -26,3 +26,9 @@ fields:
     config:
       required: true
     default: moscow
+  - type: text
+    label: Hall
+    name: hall
+    description: Hall ID
+    config:
+      required: true
