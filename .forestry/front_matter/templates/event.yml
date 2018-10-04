@@ -9,3 +9,8 @@ fields:
   description: Event date and time in ISO format
   config:
     required: true
+- type: include
+  name: poster
+  label: Poster
+  description: Poster of the event
+  template: poster
