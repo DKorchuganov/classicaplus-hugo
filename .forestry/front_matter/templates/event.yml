@@ -61,8 +61,10 @@ fields:
     name: composer
     config:
       required: true
+    description: Composer ID
   - type: text
     name: work
     label: Work
     config:
       required: true
+    description: Work ID
