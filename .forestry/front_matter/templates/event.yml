@@ -32,3 +32,13 @@ fields:
     description: Hall ID
     config:
       required: true
+- type: list
+  label: Performers
+  name: performers
+  description: List of team member IDs
+  config:
+    min: '1'
+    use_select: true
+    source:
+      type: documents
+      section: data-team
