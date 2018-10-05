@@ -65,6 +65,22 @@ sections:
   templates:
   - event
 - type: directory
+  path: content/events
+  label: ru content - Events
+  create: all
+  match: "*.*.ru.md"
+  new_doc_ext: ru.md
+  templates:
+  - content
+- type: directory
+  path: content/events
+  label: en content - Events
+  create: all
+  match: "*.*.en.md"
+  new_doc_ext: en.md
+  templates:
+  - content
+- type: directory
   path: content/about
   label: About
   create: all
