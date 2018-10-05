@@ -1,0 +1,23 @@
+---
+label: place
+hide_body: true
+is_partial: false
+fields:
+- type: field_group
+  name: name
+  label: Name
+  description: Place name in different languages
+  fields:
+  - type: include
+    template: multilang-string
+    label: Name
+    name: name
+- type: field_group
+  name: address
+  label: Address
+  description: Place address in different languages
+  fields:
+  - type: include
+    template: multilang-string
+    label: Address
+    name: address
