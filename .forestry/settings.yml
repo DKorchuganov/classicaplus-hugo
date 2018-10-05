@@ -68,7 +68,7 @@ sections:
   path: content/events
   label: ru content - Events
   create: all
-  match: "*.*.ru.md"
+  match: "**/*.ru.md"
   new_doc_ext: ru.md
   templates:
   - content
@@ -76,7 +76,7 @@ sections:
   path: content/events
   label: en content - Events
   create: all
-  match: "*.*.en.md"
+  match: "**/*.en.md"
   new_doc_ext: en.md
   templates:
   - content
