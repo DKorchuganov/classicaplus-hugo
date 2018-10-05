@@ -21,3 +21,30 @@ fields:
     template: multilang-string
     label: Address
     name: address
+- type: field_group_list
+  name: phones
+  label: Phones
+  description: List of phone groups with descriptions
+  fields:
+  - type: field_group
+    name: desc
+    label: Description
+    description: Phone descriptions in different languages
+    fields:
+    - type: include
+      name: desc
+      label: desc
+      template: multilang-string
+  - type: field_group_list
+    label: Numbers
+    name: numbers
+    description: List of phone numbers (URLs and display)
+    fields:
+    - type: text
+      name: url
+      label: URL
+      description: Phone number with plus sign and without spaces
+    - type: text
+      label: Display
+      name: disp
+      description: Phone number to be displayed on the page
