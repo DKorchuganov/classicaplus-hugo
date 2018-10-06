@@ -108,7 +108,7 @@ sections:
   path: content
   label: content - 404
   create: all
-  match: "404.*.md"
+  match: 404.*.md
   templates:
   - 404
 upload_dir: static/resources/img
