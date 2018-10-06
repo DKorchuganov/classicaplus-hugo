@@ -36,5 +36,3 @@ fields:
   config:
     required: true
   default: "/ru/404.html"
-pages:
-- content/404.es.md
