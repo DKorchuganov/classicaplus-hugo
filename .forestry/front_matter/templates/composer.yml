@@ -8,5 +8,5 @@ fields:
   label: Name
   template: name
 pages:
-- data/composers/-daniel.schnyder.yaml
+- data/composers/daniel.schnyder.yaml
 - data/composers/erik.satie.yaml
