@@ -19,17 +19,20 @@ fields:
   name: type
   label: type
   default: error
+  hidden: false
   config:
     required: true
 - type: text
   name: layout
   label: layout
+  hidden: false
   config:
     required: true
   default: err404
 - type: text
   name: url
   label: url
+  hidden: false
   config:
     required: true
   default: "/ru/404.html"
