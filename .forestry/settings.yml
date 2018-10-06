@@ -54,21 +54,63 @@ sections:
   new_doc_ext: yaml
   templates:
   - work
+- type: heading
+  label: Places and Events
 - type: directory
-  path: content/about
-  label: About
+  path: data/places
+  label: data - Places
   create: all
-  match: "**/*"
+  match: "**/*.yaml"
+  new_doc_ext: yaml
+  templates:
+  - place
+- type: directory
+  path: data/events
+  label: data - Events
+  create: all
+  match: "**/*.yaml"
+  new_doc_ext: yaml
+  templates:
+  - event
 - type: directory
   path: content/events
-  label: Events
+  label: ru content - Events
   create: all
-  match: "**/*"
+  match: "**/*.ru.md"
+  new_doc_ext: ru.md
+  templates:
+  - content
+- type: directory
+  path: content/events
+  label: en content - Events
+  create: all
+  match: "**/*.en.md"
+  new_doc_ext: en.md
+  templates:
+  - content
+- type: heading
+  label: Miscellaneous
+- type: directory
+  path: content/about
+  label: content - About
+  create: all
+  match: "**/*.md"
+  templates:
+  - content
+- type: directory
+  path: content/media
+  label: content - Media
+  create: all
+  match: "**/*.md"
+  templates:
+  - content
 - type: directory
   path: content
-  label: Pages
+  label: content - 404
   create: all
-  match: "*"
+  match: 404.*.md
+  templates:
+  - 404
 upload_dir: static/resources/img
 public_path: static/resources/img
 front_matter_path: ''

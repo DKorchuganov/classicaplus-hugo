@@ -1,0 +1,38 @@
+---
+label: '404'
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+  description: Printed on the page as a header
+- type: text
+  name: description
+  label: Description
+  description: Printed on the page as a sub-header
+  config:
+    required: true
+- type: text
+  name: type
+  label: type
+  default: error
+  hidden: false
+  config:
+    required: true
+- type: text
+  name: layout
+  label: layout
+  hidden: false
+  config:
+    required: true
+  default: err404
+- type: text
+  name: url
+  label: url
+  hidden: false
+  config:
+    required: true
+  default: "/ru/404.html"

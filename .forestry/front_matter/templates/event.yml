@@ -1,0 +1,71 @@
+---
+label: event
+hide_body: true
+is_partial: false
+fields:
+- type: datetime
+  label: DateTime
+  name: datetime
+  description: Event date and time
+  config:
+    required: true
+    display_utc: true
+    date_format: DD-MM-YYYY
+    time_format: HH:mm
+- type: field_group
+  name: poster
+  label: Poster
+  description: Poster file names
+  fields:
+  - type: include
+    name: poster
+    label: Poster
+    template: poster
+- type: field_group
+  label: Place
+  name: place
+  description: Place reference
+  fields:
+  - type: text
+    name: city
+    label: City
+    description: City name in lower case
+    config:
+      required: true
+    default: moscow
+  - type: text
+    label: Hall
+    name: hall
+    description: Hall ID
+    config:
+      required: true
+- type: list
+  label: Performers
+  name: performers
+  description: List of team member IDs
+  config:
+    min: '1'
+    use_select: false
+    source:
+      type: pages
+      section: data-team
+- type: field_group_list
+  label: Programme
+  name: programme
+  description: List of IDs of composers and works
+  config:
+    min: '1'
+    labelField: work
+  fields:
+  - type: text
+    label: Composer
+    name: composer
+    config:
+      required: true
+    description: Composer ID
+  - type: text
+    name: work
+    label: Work
+    config:
+      required: true
+    description: Work ID

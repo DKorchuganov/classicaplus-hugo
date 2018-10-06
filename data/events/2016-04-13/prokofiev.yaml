@@ -1,20 +1,21 @@
-datetime: 2016-04-13T19:00:00
+---
+datetime: 2016-04-13 19:00:00 +0000
 poster:
-  small: 'prokofiev-800.jpeg'
-  big: 'prokofiev-800.jpeg'
+  small: prokofiev-800.jpeg
+  big: prokofiev-800.jpeg
 place:
   city: moscow
   hall: richter-apartment
 performers:
-  - natalia.zhukova
-  - valeria.esaulenko
-  - eugenia.boginskaya
+- natalia.zhukova
+- valeria.esaulenko
+- eugenia.boginskaya
 programme:
-  - composer: sergey.prokofiev
-    work: op.82
-  - composer: sergey.prokofiev
-    work: op.94
-  - composer: bela.bartok
-    work: bb113
-  - composer: bohuslav.martinu
-    work: h.300
+- composer: sergey.prokofiev
+  work: op.82
+- composer: sergey.prokofiev
+  work: op.94
+- composer: bela.bartok
+  work: bb113
+- composer: bohuslav.martinu
+  work: h.300
