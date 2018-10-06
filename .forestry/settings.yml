@@ -104,9 +104,13 @@ sections:
   match: "**/*.md"
   templates:
   - content
-- type: document
-  path: content/404.ru.md
-  label: ru - 404
+- type: directory
+  path: content
+  label: content - 404
+  create: all
+  match: "404.*.md"
+  templates:
+  - 404
 upload_dir: static/resources/img
 public_path: static/resources/img
 front_matter_path: ''
