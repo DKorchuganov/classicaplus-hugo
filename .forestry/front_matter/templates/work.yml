@@ -37,5 +37,4 @@ fields:
         step: '1'
         required: true
 pages:
-- data/works/daniel.schnyder/op.1999.fs.yaml
 - data/works/erik.satie/op.1920.lbe.yaml
