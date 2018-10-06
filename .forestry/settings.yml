@@ -92,9 +92,18 @@ sections:
   label: Miscellaneous
 - type: directory
   path: content/about
-  label: About
+  label: content - About
   create: all
-  match: "**/*"
+  match: "**/*.md"
+  templates:
+  - content
+- type: directory
+  path: content/media
+  label: content - Media
+  create: all
+  match: "**/*.md"
+  templates:
+  - content
 upload_dir: static/resources/img
 public_path: static/resources/img
 front_matter_path: ''
