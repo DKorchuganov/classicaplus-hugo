@@ -15,6 +15,3 @@ fields:
   description: A page Description
   config:
     required: true
-pages:
-- content/404.en.md
-- content/404.ru.md
