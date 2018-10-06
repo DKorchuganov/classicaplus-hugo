@@ -34,4 +34,4 @@ fields:
     required: true
   default: "/ru/404.html"
 pages:
-- content/404.es.md.md
+- content/404.es.md
