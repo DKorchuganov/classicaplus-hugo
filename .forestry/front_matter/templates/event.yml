@@ -55,6 +55,7 @@ fields:
   description: List of IDs of composers and works
   config:
     min: '1'
+    labelField: work
   fields:
   - type: text
     label: Composer
