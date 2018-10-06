@@ -15,6 +15,8 @@ This project is in Work in progress status, the current production site is creat
     - [Work data file](#work-data-file)
   - [Places](#places)
     - [Place data file](#place-data-file)
+  - [Events](#events)
+    - [Event data file](#event-data-file)
 
 ## Initial setup
 
@@ -37,7 +39,7 @@ The below sections describe how to add/edit content of diffrent types.
 
 ### Team members
 
-All performers mentioned in evens should be added as team members. They could have a separate team member pages on the side, and could be mentioned on the common team page, which is controlled by `priority` filed in a team member data file, see below. Create a team member data file first, then create content files, if required.
+Any performer mentioned in evens should be added as team member. A team member could have an own page on the site, and could be mentioned on the common team page, which is controlled by `priority` filed in a team member data file, see below. Create a team member data file first, then create content files, if required.
 
 #### Team member data file
 
@@ -87,7 +89,7 @@ A few words from Eugenia
 
 ### Composers
 
-All composers used in event's programs should be described in data files in `data/composers` folder. There are no content files for composers at the moment, but they might be added in the future.
+Any composer which compositioned are used in event programs should be described in a data file in `data/composers` folder. There are no content files for composers at the moment, but they might be added in the future.
 
 #### Composer data file
 
@@ -111,7 +113,7 @@ name:
 
 ### Composer's works
 
-All compositions used in event's programs should be described in data files in `data/works` folder. Works (aka compositions) are stored in sub-foldes named according to corresponding composer's name. There are no content files for works at the moment, but they might be added in the future.
+Any composition used in event programs should be described in a data file in `data/works` folder. Works (aka compositions) are stored in sub-foldes named according to corresponding composer's name. There are no content files for works at the moment, but they might be added in the future.
 
 #### Work data file
 
@@ -138,7 +140,7 @@ date:
 
 ### Places
 
-All places for events like concert halls etc should be described in data files in `data/places` folder. There are no content files for places at the moment, but they might be added in the future.
+Any place for events like a concert hall etc should be described in a data file in `data/places` folder. There are no content files for places at the moment, but they might be added in the future.
 
 #### Place data file
 
@@ -166,4 +168,41 @@ phones:
         disp: '(495) 739-62-26'
       - url: '+74957393987'
         disp: '(495) 739-39-87'
+```
+
+### Events
+
+Any event like concert etc should be described in a data file `data/events/YYYY-MM-DD/title.yaml` and in content files for different languages in `content/events/YYYY-MM-DD` folder. Create an event data file first, then create content files with event title and description.
+
+#### Event data file
+
+1. Go to `data/events` folder, and create a sub-folder of a corresponding date in `YYYY-MM-DD` format (`data/events/2016-04-13`, for example), and create a file with `event-name.yaml` filename format, where `event-name` is a short name of the event in lower case.
+2. Add `datetime` field of the event date and time. The format for the field should be as in the below example.
+3. Add `poster` section with `small` and `big` fields for poster file names. `small` poster is displayed on the common team page, `big` poster on an individual page of a team member. `poster` section is optional for persons with negative `priority`, see above. Poster files should be stored in `static/resources/img/team/firstname.lastname` folder of a specific team member.
+4. Add `address` section for the place address in different languages, addresses are given in fields with respective languge codes like `ru` and `en`
+
+**Event data file example:**
+`data/events/2016-05-18/3x3.yaml`
+
+```yaml
+datetime: 2016-05-18T19:00:00
+poster:
+  small: '3x3-800.jpeg'
+  big: '3x3-800.jpeg'
+place:
+  city: moscow
+  hall: glinka-museum
+performers:
+  - natalia.zhukova
+  - valeria.esaulenko
+  - eugenia.boginskaya
+programme:
+  - composer: sergey.prokofiev
+    work: op.82
+  - composer: sergey.prokofiev
+    work: op.94
+  - composer: alberto.ginastera
+    work: op.22
+  - composer: bohuslav.martinu
+    work: h.300
 ```
