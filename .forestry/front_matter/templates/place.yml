@@ -48,3 +48,5 @@ fields:
       label: Display
       name: disp
       description: Phone number to be displayed on the page
+    config:
+      labelField: disp
