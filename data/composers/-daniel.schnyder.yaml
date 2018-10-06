@@ -1,2 +1,11 @@
 ---
+name:
+  ru:
+    first: Даниель
+    last: Шнидер
+    full: Даниель Шнидер
+  en:
+    first: " Daniel"
+    last: " Schnyder"
+    full: " Daniel Schnyder"
 draft: true
