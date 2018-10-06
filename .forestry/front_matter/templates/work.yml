@@ -8,7 +8,7 @@ fields:
   name: opus
   description: Opus ID
   config:
-    required: true
+    required: false
 - type: field_group
   name: title
   label: Title
