@@ -20,7 +20,7 @@ This project is in Work in progress status, the current production site is creat
 
 ## Initial setup
 
-The best way to edit/create the site content on a local PC is to use [VS Code](https://code.visualstudio.com), an open-source code editor from Microsoft. It has validation capabilities for YAML data files using JSON schema, and the project contains relevant schema files as well as the .vscode folder with corresponding project settings.
+The best way to edit/create the site content on a local PC is to use [VS Code](https://code.visualstudio.com), an open-source code editor from Microsoft. It has validation capabilities for YAML data files using JSON schema, and the project contains relevant schema files as well as the `.vscode` folder with corresponding project settings.
 
 List of optional VS Code extensions for a comfortable work:
 
@@ -30,7 +30,7 @@ List of optional VS Code extensions for a comfortable work:
 
 ## Content editing
 
-Site content consits of 2 major parts: data files in `data` folder and content files in `content` folder. Data files use YAML format, content files are in markdown format with YAML front-matter. The site is multilingual (currently in english and Rissian), which is supported by:
+The site content consits of 2 major parts: data files in `data` folder and content files in `content` folder. Data files use YAML format, content files are in markdown format with YAML front-matter. The site is multilingual (currently in English and Rissian), which is supported by:
 
 - two language version of the each content file with different language code extensions like `.ru.md` and `.en.md`
 - language-specific sub-sections in YAML data files
@@ -39,7 +39,7 @@ The below sections describe how to add/edit content of diffrent types.
 
 ### Team members
 
-Any performer mentioned in evens should be added as team member. A team member could have an own page on the site, and could be mentioned on the common team page, which is controlled by `priority` filed in a team member data file, see below. Create a team member data file first, then create content files, if required.
+Any performer mentioned in evens should be added as team member. A team member could have an own page on the site, and could be mentioned on the common team page, which is controlled by the `priority` filed in a team member data file, see below. Create a team member data file first, then create content files, if required.
 
 #### Team member data file
 
