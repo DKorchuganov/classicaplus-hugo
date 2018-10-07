@@ -172,14 +172,16 @@ phones:
 
 ### Events
 
-Any event like concert etc should be described in a data file `data/events/YYYY-MM-DD/title.yaml` and in content files for different languages in `content/events/YYYY-MM-DD` folder. Create an event data file first, then create content files with event title and description.
+Any event like concert etc should be described in a data file `data/events/YYYY-MM-DD/event-name.yaml` and in content files for different languages in `content/events/YYYY-MM-DD` folder. Create an event data file first, then create content files with event title and description.
 
 #### Event data file
 
 1. Go to `data/events` folder, and create a sub-folder of a corresponding date in `YYYY-MM-DD` format (`data/events/2016-04-13`, for example), and create a file with `event-name.yaml` filename format, where `event-name` is a short name of the event in lower case.
 2. Add `datetime` field of the event date and time. The format for the field should be as in the below example.
-3. Add `poster` section with `small` and `big` fields for poster file names. `small` poster is displayed on the common team page, `big` poster on an individual page of a team member. `poster` section is optional for persons with negative `priority`, see above. Poster files should be stored in `static/resources/img/team/firstname.lastname` folder of a specific team member.
-4. Add `address` section for the place address in different languages, addresses are given in fields with respective languge codes like `ru` and `en`
+3. Add `poster` section with `small` and `big` fields for poster file names. `small` poster is displayed on the common events page, `big` poster on an individual page of an event. `poster` section is mandatory for any event. Poster files should be stored in `static/resources/img/events/YYYY-MM-DD/event-name/` folder of the event.
+4. Add `place` section with a reference to a place of the event. It has 2 fields: `city` and `hall`, which should correspond to the folder and the file name of the place, see above description in [Place data file](#place-data-file) section.
+5. Add `performers` section with the list of performance short names, which should match file names in `data/team` folder
+6. Add `programme` section for a concert programme items. Each item has 2 fields: `composer` and `work`, which should correspond to a folder and a file name of a composition, see above description in [Work data file](#work-data-file) section.
 
 **Event data file example:**
 `data/events/2016-05-18/3x3.yaml`
