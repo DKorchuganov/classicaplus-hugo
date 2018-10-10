@@ -21,7 +21,7 @@ This project is in Work in progress status, the current production site is creat
 
 ## Initial setup
 
-The best way to edit/create the site content on a local PC is to use [VS Code](https://code.visualstudio.com), an open-source code editor from Microsoft. It has validation capabilities for YAML data files using JSON schema, and the project contains relevant schema files as well as the `.vscode` folder with corresponding project settings.
+The best way to edit/create the site content on a local PC is to use [VS Code](https://code.visualstudio.com), an open-source code editor from Microsoft. It has validation capabilities for YAML data files using JSON schema, and the project contains relevant schema files as well as the `.vscode` folder with relevant project settings.
 
 List of optional VS Code extensions for comfortable work:
 
@@ -47,7 +47,7 @@ Any performer mentioned in evens should be added as a team member. A team member
 1. Go to `data/team` folder and create a file with `firstname.lastname.yaml` filename format
 2. Add `priority` field; a positive value defines a position of a team member on the common team page (ordered from lowest to highest). Put a negative value to exclude a person from the team page.
 3. Add a `poster` section with `small` and `big` fields for poster file names. The `small` poster is displayed on the common team page, the `big` poster is published on an individual page of a team member. The `poster` section is optional for persons with negative `priority`, see above. Poster files should be stored in `static/resources/img/team/firstname.lastname` folder of a specific team member.
-4. Add `name` section with multiple language code sub-sections like `ru` and `en`. In each sub-section add `first` and `last` fields for the firs name and last name respectively.
+4. Add `name` section with multiple language code sub-sections like `ru` and `en`. In each sub-section add `first` and `last` fields for the first name and last name respectively.
 5. Add `instrument` section for the person's instrument names in different languages; names are given in fields with respective language codes like `ru` and `en`.
 
 **Team member data file example:**
@@ -74,7 +74,7 @@ instrument:
 
 Content files are mandatory for those team members who are published on the common team page (with positive priority field, see above in the [Team member data file](#team-member-data-file) section). Content files of team members with negative priority are still used to create an individual member page, but this page is not referenced on the common team page.
 
-1. Go to the `content/team` folder and create a content file with `firstname.lastname.ru.md` filename format for content in Russian language, and corresponding files for other language codes.
+1. Go to the `content/team` folder and create a content file with `firstname.lastname.ru.md` filename format for content in the Russian language, and corresponding files for other language codes.
 2. Add a YAML front-matter with `title` and `description` fields, separated by lines with a triple dash, see the below example
 
 **Team member content file example:**
@@ -95,7 +95,7 @@ Any composer whose compositions are used in event programs should be described i
 #### Composer data file
 
 1. Go to the `data/composers` folder and create a file with `firstname.lastname.yaml` filename format.
-2. Add a `name` section with multiple language code sub-sections like `ru` and `en`. In each sub-section add `first`, `last` and `full` fields for the firs name, last name and full name respectively.
+2. Add a `name` section with multiple language code sub-sections like `ru` and `en`. In each sub-section add `first`, `last` and `full` fields for the first name, last name and full name respectively.
 
 **Composer data file example:**
 `data/composers/alberto.ginastera.yaml`
@@ -123,8 +123,8 @@ Any composition used in event programs should be described in a data file in `da
    - if opus numbers have only digits and the numbering system does not have any special name, just prepend the digital opus number with "op" letters, for example, `op.22.yaml`
    - if a composer doesn't have any opus numbering system, then some meaningful ID should be created. For example, it could look like `op.1920.lbe.yaml`, where `op` is just a common prefix, `1920` is the work creation year, and `lbe` is an abbreviated work name
 2. Add an `opus` field with the work opus number, which in most cases should match the data file name without `.yaml` extension. It will be used on events pages in concert programs, so it might have uppercase letters and spaces. This field is optional, so if a work doesn't have a real opus id like in the case of `op.1920.lbe.yaml` from the above example, then the `opus` field can be skipped.
-3. Add a `title` section for the work's title in different languages, titles are given in fields with respective languge codes like `ru` and `en`.
-4. Add a `date` section. It's supposed to have different dates assiciated with the work, but the only creation date is supported at the moment, see the below example for the details. The `date` section is optional, but once it present, the `year` field is mandatory in the `created` sub-section.
+3. Add a `title` section for the work's title in different languages, titles are given in fields with respective language codes like `ru` and `en`.
+4. Add a `date` section. It's supposed to have different dates assoiciated with the work, but the only creation date is supported at the moment, see the below example for the details. The `date` section is optional, but once it present, the `year` field is mandatory in the `created` sub-section.
 
 **Work data file example:**
 `data/works/alberto.ginastera/op.22.yaml`
@@ -146,9 +146,9 @@ Any place for events like a concert hall etc should be described in a data file 
 #### Place data file
 
 1. Go to the `data/places` folder, into a sub-folder of a corresponding city (`data/places/moscow`, for example. Just create a sub-folder for a city if it doesn't exist yet), and create a file with `place-name.yaml` filename format.
-2. Add a `name` section for the place name in different languages, names are given in fields with respective languge codes like `ru` and `en`.
-3. Add an `address` section for the place address in different languages, addresses are given in fields with respective languge codes like `ru` and `en`.
-4. Add an optional `phones` section, which contains a list of different phone cotact numbers of the place. Each element of the list has a complex structure given in the below example. It allows to publish different sets of phone numbers for different purposes, like general inquiries, ticket office etc. In the below example the only one set of phone numbers is given, for the ticket office.
+2. Add a `name` section for the place name in different languages, names are given in fields with respective language codes like `ru` and `en`.
+3. Add an `address` section for the place address in different languages, addresses are given in fields with respective language codes like `ru` and `en`.
+4. Add an optional `phones` section, which contains a list of different phone contact numbers of the place. Each element of the list has a complex structure given in the below example. It allows publishing different sets of phone numbers for various purposes, like general inquiries, ticket office etc. In the below example the only one set of phone numbers is given, for the ticket office.
 
 **Place data file example:**
 `data/places/moscow/glinks-museum.yaml`
@@ -180,9 +180,9 @@ Any event like concert etc should be described in a data file `data/events/YYYY-
 1. Go to the `data/events` folder, and create a sub-folder of a corresponding date in `YYYY-MM-DD` format (`data/events/2016-04-13`, for example), and then create a file with `event-name.yaml` filename format, where `event-name` is a short name of the event in lowercase.
 2. Add a `datetime` field of the event date and time. The format for the field should be as in the below example.
 3. Add a `poster` section with `small` and `big` fields for poster file names. A `small` poster is displayed on the common events page, a `big` poster on an individual page of an event. `poster` section is mandatory for any event. Poster files should be stored in `static/resources/img/events/YYYY-MM-DD/event-name/` folder of the event.
-4. Add a `place` section with a reference to a place of the event. It has 2 fields: `city` and `hall`, which should correspond to the folder and the file name of the place, see above description in the [Place data file](#place-data-file) section.
+4. Add a `place` section with a reference to a place of the event. It has 2 fields: `city` and `hall`, which should correspond to the folder and the file name of the place, see the above description in the [Place data file](#place-data-file) section.
 5. Add a `performers` section with the list of performance short names, which should match file names in `data/team` folder
-6. Add a `programme` section for concert programme items. Each item has two fields: `composer` and `work`, which should correspond to a folder and a file name of composition, see above description in the [Work data file](#work-data-file) section.
+6. Add a `programme` section for concert programme items. Each item has two fields: `composer` and `work`, which should correspond to a folder and a file name of composition, see the above description in the [Work data file](#work-data-file) section.
 
 **Event data file example:**
 `data/events/2016-05-18/3x3.yaml`
@@ -214,8 +214,8 @@ programme:
 
 Content files are mandatory for events; they have an event title, a short and a detailed description of the event.
 
-1. Go to the `content/events` folder and create a create a sub-folder of a corresponding date in `YYYY-MM-DD` format (`content/events/2016-04-13`, for example). In that sub-folder create a content file with `event-name.ru.md` filename format for content in Russian language, and corresponding files for other language codes.
-2. Add a YAML front-matter with `title` and `description` fields, separated by lines with triple dash, see the below example
+1. Go to the `content/events` folder and create a create a sub-folder of a corresponding date in `YYYY-MM-DD` format (`content/events/2016-04-13`, for example). In that sub-folder create a content file with `event-name.ru.md` filename format for content in the Russian language and corresponding files for other language codes.
+2. Add a YAML front-matter with `title` and `description` fields, separated by lines with the triple dash, see the below example
 
 **Team member content file example:**
 `content/events/2016-05-18/3x3.en.md`
