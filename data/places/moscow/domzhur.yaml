@@ -1,2 +1,9 @@
 ---
+name:
+  ru: Центральный Дом Журналиста
+  en: Tsentral'nyy Dom zhurnalista
+address:
+  ru: Никитский бульвар, д.8а (метро «Арбатская»)
+  en: Nikitsky Boulevard, 8а ("Arbatskaya" metro st)
+phones: []
 draft: true
