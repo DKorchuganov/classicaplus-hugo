@@ -1,4 +1,15 @@
 ---
 place:
   city: moscow
+  hall: domzhur
+datetime: 2012-04-24 19:30:00 +0000
+poster:
+  small: 5sonat-600.jpeg
+  big: 5sonat-600.jpeg
+performers:
+- valeria.esaulenko
+- natalia.zhukova
+programme:
+- composer: daniel.schnyder
+  work: op.1999.fs
 draft: true
