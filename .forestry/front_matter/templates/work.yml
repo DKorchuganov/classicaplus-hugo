@@ -35,7 +35,7 @@ fields:
       config:
         min: '0'
         step: '1'
-        required: true
+        required: false
 pages:
 - data/works/daniel.schnyder/op-1175-pt.yaml
 - data/works/daniel.schnyder/op.1041.fs.yaml
