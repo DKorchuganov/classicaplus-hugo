@@ -8,4 +8,6 @@ fields:
   label: Name
   template: name
 pages:
+- data/composers/sigfrid.karg-elert.yaml
+- data/composers/daniel.schnyder.yaml
 - data/composers/erik.satie.yaml

@@ -50,3 +50,5 @@ fields:
       description: Phone number to be displayed on the page
     config:
       labelField: disp
+pages:
+- data/places/moscow/domzhur.yaml

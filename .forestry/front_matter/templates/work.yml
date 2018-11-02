@@ -8,7 +8,7 @@ fields:
   name: opus
   description: Opus ID
   config:
-    required: true
+    required: false
 - type: field_group
   name: title
   label: Title
@@ -35,6 +35,8 @@ fields:
       config:
         min: '0'
         step: '1'
-        required: true
+        required: false
 pages:
+- data/works/daniel.schnyder/op.1175.pt.yaml
+- data/works/daniel.schnyder/op.1041.fs.yaml
 - data/works/erik.satie/op.1920.lbe.yaml

@@ -16,5 +16,7 @@ fields:
   config:
     required: true
 pages:
+- content/events/2012-04-24/5sonat.ru.md
+- content/events/2012-04-24/5sonat.en.md
 - content/404.ru.md
 - content/404.en.md
