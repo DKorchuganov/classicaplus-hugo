@@ -10,5 +10,10 @@ performers:
 - valeria.esaulenko
 - natalia.zhukova
 programme:
+- composer: sergey.prokofiev
+  work: op.83
+- composer: daniel.schnyder
+  work: op.1175.pt
 - composer: daniel.schnyder
   work: op.1041.fs
+
