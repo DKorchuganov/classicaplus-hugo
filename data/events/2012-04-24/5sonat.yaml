@@ -1,4 +1,3 @@
----
 place:
   city: moscow
   hall: domzhur
@@ -10,8 +9,12 @@ performers:
 - valeria.esaulenko
 - natalia.zhukova
 programme:
+- composer: francois.borne
+  work: carmenfantasie
 - composer: sergey.prokofiev
   work: op.83
+- composer: francis.poulenc
+  work: fp.164
 - composer: daniel.schnyder
   work: op.1175.pt
 - composer: daniel.schnyder
