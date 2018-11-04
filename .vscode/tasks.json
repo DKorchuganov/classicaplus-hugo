@@ -17,6 +17,7 @@
       "label": "Hugo server",
       "type": "shell",
       "command": "hugo server",
+      "showInStatusBar": false,
       "problemMatcher": []
     }
   ]
