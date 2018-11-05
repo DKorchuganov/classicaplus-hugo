@@ -71,7 +71,7 @@
 
                 <ol>
                   {{ range $item := $event.programme }}
-                    {{- if isset $.Site.Data.composers $item.composer -}}
+                    {{- if and (isset $.Site.Data.composers $item.composer) (isset $.Site.Data.works $item.composer) -}}
                       {{- $composer := index $.Site.Data.composers $item.composer -}}
                       {{- $comp_name := index $composer.name $lang -}}
                       {{- $work := index (index $.Site.Data.works $item.composer) $item.work -}}
