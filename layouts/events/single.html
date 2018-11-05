@@ -71,17 +71,22 @@
 
                 <ol>
                   {{ range $item := $event.programme }}
-                    {{- if isset $.Site.Data.composers $item.composer -}}
+                    {{- if and (isset $.Site.Data.composers $item.composer) (isset $.Site.Data.works $item.composer) -}}
                       {{- $composer := index $.Site.Data.composers $item.composer -}}
                       {{- $comp_name := index $composer.name $lang -}}
-                      {{- $work := index (index $.Site.Data.works $item.composer) $item.work -}}
-                      {{- $work_title := index $work.title $lang -}}
-                      {{- if isset $work "date" -}}
-                        {{- if isset $work.date "created" -}}
-                        <li>{{ printf "%s %s, %s, %s (%d)" $comp_name.first $comp_name.last $work_title $work.opus $work.date.created.year }}</li>
+                      {{- $comp_works := index $.Site.Data.works $item.composer -}}
+                      {{- if isset $comp_works $item.work -}}
+                        {{- $work := index $comp_works $item.work -}}
+                        {{- $work_title := index $work.title $lang -}}
+                        {{- if isset $work "date" -}}
+                          {{- if isset $work.date "created" -}}
+                          <li>{{ printf "%s %s, %s, %s (%d)" $comp_name.first $comp_name.last $work_title $work.opus $work.date.created.year }}</li>
+                          {{- end -}}
+                        {{- else -}}
+                          <li>{{ printf "%s %s, %s, %s" $comp_name.first $comp_name.last $work_title $work.opus }}</li>
                         {{- end -}}
                       {{- else -}}
-                        <li>{{ printf "%s %s, %s, %s" $comp_name.first $comp_name.last $work_title $work.opus }}</li>
+                        <li style="color:red;">{{- printf "%s is not a valid work ID " $item.work -}}</li>
                       {{- end -}}
                     {{- else -}}
                       <li style="color:red;">{{- printf "%s is not a valid composer ID " $item.composer -}}</li>
