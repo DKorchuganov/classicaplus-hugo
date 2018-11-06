@@ -77,14 +77,18 @@
                       {{- $comp_works := index $.Site.Data.works $item.composer -}}
                       {{- if isset $comp_works $item.work -}}
                         {{- $work := index $comp_works $item.work -}}
-                        {{- $work_title := index $work.title $lang -}}
-                        {{- if isset $work "date" -}}
-                          {{- if isset $work.date "created" -}}
-                          <li>{{ printf "%s %s, %s, %s (%d)" $comp_name.first $comp_name.last $work_title $work.opus $work.date.created.year }}</li>
+                        {{ $work_title := index $work.title $lang }}
+                        <li>
+                          {{ printf "%s %s, %s" $comp_name.first $comp_name.last $work_title }}
+                          {{- if isset $work "opus" -}}
+                            {{ printf ", %s" $work.opus }}
                           {{- end -}}
-                        {{- else -}}
-                          <li>{{ printf "%s %s, %s, %s" $comp_name.first $comp_name.last $work_title $work.opus }}</li>
-                        {{- end -}}
+                          {{- if isset $work "date" -}}
+                            {{- if isset $work.date "created" -}}
+                              {{ printf " (%d)" $work.date.created.year }}
+                            {{- end -}}
+                          {{ end }}
+                        </li>
                       {{- else -}}
                         <li style="color:red;">{{- printf "%s is not a valid work ID " $item.work -}}</li>
                       {{- end -}}
