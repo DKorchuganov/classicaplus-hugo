@@ -95,7 +95,7 @@ Any composer whose compositions are used in event programs should be described i
 #### Composer data file
 
 1. Go to the `data/composers` folder and create a file with `firstname.lastname.yaml` filename format.
-2. Add a `name` section with multiple language code sub-sections like `ru` and `en`. In each sub-section add `first`, `last` and `full` fields for the first name, last name and full name respectively.
+2. Add a `name` section with multiple language code sub-sections like `ru` and `en`. In each sub-section add `first`, `last` and `full` fields for the first name, last name and full name respectively. You can also add `short` field for a short name of the composer.
 
 **Composer data file example:**
 `data/composers/alberto.ginastera.yaml`
@@ -103,13 +103,15 @@ Any composer whose compositions are used in event programs should be described i
 ```yaml
 name:
   ru:
-    first: Альберто
-    last: Хинастера
-    full: Альберто Эваристо Хинастера
+    first: Даниель
+    last: Шнидер
+    full: Даниель Шнидер
+    short: Д. Шнидер
   en:
-    first: Alberto
-    last: Ginastera
-    full: Alberto Evaristo Ginastera
+    first: Daniel
+    last: Schnyder
+    full: Daniel Schnyder
+    short: D. Schnyder
 ```
 
 ### Composer's works
@@ -176,6 +178,13 @@ phones:
 Any event like concert etc should be described in a data file `data/events/YYYY-MM-DD/event-name.yaml` and in content files for different languages in `content/events/YYYY-MM-DD` folder. Create an event data file first, then create content files with the event title and description.
 
 #### Event data file
+
+The event data file contains general information about the event like date of the event and a reference to the place of the event. It also has a list of performers of the event and list of works in the concert programme.
+
+The event programme is printed on the event's page in two places:
+
+ * as the list of composers (the full names of composers are used)
+ * as the list of works (short names of composers are used where available)
 
 1. Go to the `data/events` folder, and create a sub-folder of a corresponding date in `YYYY-MM-DD` format (`data/events/2016-04-13`, for example), and then create a file with `event-name.yaml` filename format, where `event-name` is a short name of the event in lowercase.
 2. Add a `datetime` field of the event date and time. The format for the field should be as in the below example.
