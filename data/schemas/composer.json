@@ -20,6 +20,9 @@
                         },
                         "full": {
                             "type": "string"
+                        },
+                        "short": {
+                            "type": "string"
                         }
                     },
                     "required": [
