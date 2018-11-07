@@ -59,9 +59,9 @@
                     {{- $composer := index $.Site.Data.composers $comp_id -}}
                     {{- $comp_name := index $composer.name $lang -}}
                     {{- if eq (add $idx 1) $len -}}
-                      {{- printf "%s %s" $comp_name.first $comp_name.last -}}
+                      {{- $comp_name.full -}}
                     {{- else -}}
-                      {{- printf "%s %s, " $comp_name.first $comp_name.last -}}
+                      {{- printf "%s, " $comp_name.full -}}
                     {{- end -}}
                   {{- else -}}
                     {{- printf "%s is not a valid composer ID " $comp_id -}}
@@ -79,7 +79,11 @@
                         {{- $work := index $comp_works $item.work -}}
                         {{ $work_title := index $work.title $lang }}
                         <li>
-                          {{ printf "%s %s, %s" $comp_name.first $comp_name.last $work_title }}
+                          {{- if isset $comp_name "short" -}}
+                            {{ printf "%s, %s" $comp_name.short $work_title }}
+                          {{- else -}}
+                            {{ printf "%s %s, %s" $comp_name.first $comp_name.last $work_title }}
+                          {{- end -}}
                           {{- if isset $work "opus" -}}
                             {{ printf ", %s" $work.opus }}
                           {{- end -}}
