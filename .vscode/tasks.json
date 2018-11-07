@@ -4,20 +4,16 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Hugo",
-      "type": "shell",
-      "command": "hugo",
-      "problemMatcher": [],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
-    },
-    {
       "label": "Hugo server",
       "type": "shell",
       "command": "hugo server",
       "showInStatusBar": false,
+      "problemMatcher": []
+    },
+    {
+      "label": "PR to upstream",
+      "type": "shell",
+      "command": "hub pull-request --base upstream --no-edit --push",
       "problemMatcher": []
     }
   ]
