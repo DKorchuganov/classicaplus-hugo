@@ -1,10 +1,11 @@
----
 name:
   ru:
     first: Даниель
     last: Шнидер
     full: Даниель Шнидер
+    short: Д. Шнидер
   en:
     first: Daniel
     last: Schnyder
     full: Daniel Schnyder
+    short: D. Schnyder
