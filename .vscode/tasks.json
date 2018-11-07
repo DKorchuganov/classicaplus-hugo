@@ -11,9 +11,9 @@
       "problemMatcher": []
     },
     {
-      "label": "PR to upstream",
+      "label": "Pull from upstream",
       "type": "shell",
-      "command": "hub pull-request --base upstream --no-edit --push",
+      "command": "git upstream master",
       "problemMatcher": []
     }
   ]
