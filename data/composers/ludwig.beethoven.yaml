@@ -3,7 +3,9 @@ name:
     first: Людвиг
     last: Бетховен  
     full: Людвиг ван Бетховен
+    short: Л. ван Бетховен
   en:
     first: Ludwig
     last: Beethoven
     full: Ludwig van Beethoven
+    short: L. van Beethoven
