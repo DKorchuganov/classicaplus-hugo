@@ -6,7 +6,7 @@
 <div class="row date-time">
   <div class="col-xs-6">
     {{- $event_datefmt := dateFormat "02.01.2006" $event.datetime -}}
-    {{- $event_weekday := index $weekdays (sub (int (printf "%d" (time $event.datetime).Weekday)) 1) -}}
+    {{- $event_weekday := index $weekdays (int (printf "%d" (time $event.datetime).Weekday)) -}}
     {{ $event_time := dateFormat "15:04" $event.datetime }}
     <p class="date">{{ printf "%s, %s" $event_datefmt $event_weekday }}</p>
   </div>
