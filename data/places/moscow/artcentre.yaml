@@ -1,15 +1,13 @@
 name:
-  ru: 'Мемориальная квартира Святослава Рихтера'
-  en: 'Sviatoslav Richter Memorial Apartment'
+  ru: 'Центр Искусств.Москвва'
+  en: 'Artcenter.Moscow'
 address:
-  ru: 'ул. Большая Бронная, дом 2/6, кв. 58, 16-й этаж (метро «Пушкинская», «Тверская», «Арбатская»)'
-  en: 'Bolshaya Bronnaya Street 2/6, Apt. 58, 16th floor'
+  ru: 'ул. Волхонка, дом 15 (метро «Кропоткинская»)'
+  en: 'Volchonka street, 15'
 phones:
   - desc:
       ru: 'Заказ билетов'
       en: 'Ticket office'
     numbers:
-      - url: '+74956958346'
-        disp: '(495) 695-83-46'
-      - url: '+74956974705'
-        disp: '(495) 697-47-05'
+      - url: '+74959899561'
+        disp: '+7 (495) 989 95 61'
