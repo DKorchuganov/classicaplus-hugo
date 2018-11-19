@@ -1,0 +1,14 @@
+priority: -1
+poster:
+  small: natalia.zhukova-small700.jpg
+  big: natalia.zhukova-big700.jpg
+name:
+  ru:
+    first: Данила
+    last: Лукьянов
+  en:
+    first: Daniel
+    last: Lukyanov
+instrument:
+  ru: кларнет
+  en: clarinet

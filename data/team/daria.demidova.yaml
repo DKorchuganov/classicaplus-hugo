@@ -1,0 +1,14 @@
+priority: -1
+poster:
+  small: natalia.zhukova-small700.jpg
+  big: natalia.zhukova-big700.jpg
+name:
+  ru:
+    first: Дарья
+    last: Демидова
+  en:
+    first: Daria
+    last: Demidova
+instrument:
+  ru: альт
+  en: viola

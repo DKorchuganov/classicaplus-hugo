@@ -1,0 +1,14 @@
+priority: -1
+poster:
+  small: natalia.zhukova-small700.jpg
+  big: natalia.zhukova-big700.jpg
+name:
+  ru:
+    first: Илья 
+    last: Ганичев
+  en:
+    first: Ilia
+    last: Ganichev
+instrument:
+  ru: фагот
+  en: bassoon
