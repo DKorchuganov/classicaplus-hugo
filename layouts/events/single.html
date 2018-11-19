@@ -32,18 +32,22 @@
                 <h4 class="subsection-heading">{{ index $.Site.Data.i18n.events.performers $lang }}</h4>
                 <ul class="list-unstyled">
                 {{ range $perf_id := $event.performers }}
-                  {{- $performer := index $.Site.Data.team $perf_id -}}
-                  {{- $perf_name := index $performer.name $lang -}}
-                  {{- $perf_inst := index $performer.instrument $lang -}}
-                  {{- if gt $performer.priority 0 -}}
-                    <li>
-                      <a href="{{ printf "/%s/team/%s" $lang $perf_id }}">
-                        {{- printf "%s %s, %s" $perf_name.first $perf_name.last $perf_inst -}}
-                      </a>
-                    </li>                    
-                  {{ else }}                  
-                    <li>{{ printf "%s %s, %s" $perf_name.first $perf_name.last $perf_inst }}</li>
-                  {{ end }}
+                  {{- if isset $.Site.Data.team $perf_id -}}
+                    {{- $performer := index $.Site.Data.team $perf_id -}}
+                    {{- $perf_name := index $performer.name $lang -}}
+                    {{- $perf_inst := index $performer.instrument $lang -}}
+                    {{- if gt $performer.priority 0 -}}
+                      <li>
+                        <a href="{{ printf "/%s/team/%s" $lang $perf_id }}">
+                          {{- printf "%s %s, %s" $perf_name.first $perf_name.last $perf_inst -}}
+                        </a>
+                      </li>                    
+                    {{ else }}                  
+                      <li>{{ printf "%s %s, %s" $perf_name.first $perf_name.last $perf_inst }}</li>
+                    {{ end }}
+                  {{- else -}}
+                    <li style="color:red;">{{- printf "%s is not a valid performer ID " $perf_id -}}</li>
+                  {{- end -}}
                 {{ end }}
                 </ul>
               {{ end }}
