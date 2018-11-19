@@ -9,8 +9,16 @@ performers:
 - valeria.esaulenko
 - natalia.zhukova
 programme:
+- composer: sigfrid.karg-elert
+  work: op.107
+- composer: ludwig.beethoven
+  work: op.31.2
+- composer: sigfrid.karg-elert
+  work: op.140
 - composer: francois.borne
   work: carmenfantasie
+- composer: franz.liszt
+  work: op.254
 - composer: sergey.prokofiev
   work: op.83
 - composer: francis.poulenc
