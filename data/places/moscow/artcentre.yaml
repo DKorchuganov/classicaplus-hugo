@@ -1,0 +1,13 @@
+name:
+  ru: 'Центр Искусств.Москвва'
+  en: 'Artcenter.Moscow'
+address:
+  ru: 'ул. Волхонка, дом 15 (метро «Кропоткинская»)'
+  en: 'Volchonka street, 15'
+phones:
+  - desc:
+      ru: 'Заказ билетов'
+      en: 'Ticket office'
+    numbers:
+      - url: '+74959899561'
+        disp: '+7 (495) 989 95 61'

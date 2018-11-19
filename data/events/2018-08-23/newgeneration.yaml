@@ -1,0 +1,28 @@
+datetime: 2018-08-23T19:30:00
+poster: 
+  small: ClassicaPlus2018.jpeg
+  big: ClassicaPlus2018.jpeg
+place:
+  city: moscow
+  hall: artcentre
+performers:
+- valeria.esaulenko
+- natalia.zhukova
+- eugenia.boginskaya
+- nadezhda.artamonova
+- zahar.stepanenko
+programme:
+- composer: pavel.karmanov
+  work: presentformyself
+- composer: pavel.karmanov
+  work: differentrains
+- composer: alexey.kurbatov
+  work: op.32
+- composer: oleg.afanasov
+  work: collisiondetected
+- composer: oleg.paiberdin
+  work: sobout
+- composer: dmitri.kourliandski
+  work: passesimple
+- composer: dmitri.kourliandski
+  work: riotofspring
