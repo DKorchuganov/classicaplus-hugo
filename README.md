@@ -190,8 +190,9 @@ The event programme is printed on the event's page in two places:
 2. Add a `datetime` field of the event date and time. The format for the field should be as in the below example.
 3. Add a `poster` section with `small` and `big` fields for poster file names. A `small` poster is displayed on the common events page, a `big` poster on an individual page of an event. `poster` section is mandatory for any event. Poster files should be stored in `static/resources/img/events/YYYY-MM-DD/event-name/` folder of the event.
 4. Add a `place` section with a reference to a place of the event. It has 2 fields: `city` and `hall`, which should correspond to the folder and the file name of the place, see the above description in the [Place data file](#place-data-file) section.
-5. Add a `performers` section with the list of performance short names, which should match file names in `data/team` folder
-6. Add a `programme` section for concert programme items. Each item has two fields: `composer` and `work`, which should correspond to a folder and a file name of composition, see the above description in the [Work data file](#work-data-file) section.
+5. Add an optional `timepad` field with the event ID from timepad.ru to add the "Buy tickets" button
+6. Add an optional `performers` section with the list of performance short names, which should match file names in `data/team` folder
+7. Add an optional `programme` section for concert programme items. Each item has two fields: `composer` and `work`, which should correspond to a folder and a file name of composition, see the above description in the [Work data file](#work-data-file) section.
 
 **Event data file example:**
 `data/events/2016-05-18/3x3.yaml`

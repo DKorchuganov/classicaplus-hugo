@@ -1,6 +1,9 @@
 starttime:
   en: "starts at"
   ru: "начало в"
+timepad:
+  en: "Buy tickets"
+  ru: "Купить билеты"
 performers:
   en: "Performers"
   ru: "Исполнители"
