@@ -19,6 +19,16 @@
               <img class="img-responsive center-block"
                 src="{{ printf "/resources/img/events/%s/%s" $event_relpath $event.poster.big }}"
                 alt="{{ .Description }}"/>
+                {{ if isset $event "timepad" }}
+                  <div style="padding-top:10px">
+                    <a href="https://classicaplus.timepad.ru/event/{{- $event.timepad -}}/" data-twf-placeholder="yes">{{- index $.Site.Data.i18n.events.timepad $lang -}}</a>
+                    <script type="text/javascript" async="async" defer="defer" charset="UTF-8"
+                            src="https://timepad.ru/js/tpwf/loader/min/loader.js"
+                            data-timepad-widget-v2="event_register">
+                      (function(){return {"locale": "{{ $lang }}","event":{"id":"{{- $event.timepad -}}"},"hidePreloading":true,"initialRoute":"button","buttonSettings":{"text":"{{- index $.Site.Data.i18n.events.timepad $lang -}}"}}; })();
+                    </script>
+                  </div>
+                {{ end }}
             </div>
             <div class="col-sm-8">
               {{ partial "events/event_datetime.html" (dict "lang" $lang "event" $event "i18n" $.Site.Data.i18n) }}
@@ -113,21 +123,7 @@
 
               <!-- DISQUS -->
               <div id="disqus_thread"></div>
-              <script type="text/javascript" th:inline="javascript">
-                  var disqus_config = function () {
-                      this.page.identifier = {{ strings.TrimPrefix .LanguagePrefix .RelPermalink }};
-                      this.language = {{ .Lang }};
-                  };
-                  (function() {  // DON'T EDIT BELOW THIS LINE
-                      var d = document, s = d.createElement('script');
-
-                      s.src = '//classicaplus.disqus.com/embed.js';
-
-                      s.setAttribute('data-timestamp', +new Date());
-                      (d.head || d.body).appendChild(s);
-                  })();
-              </script>
-
+              
             </div>
           </div>
         </div>
@@ -135,4 +131,18 @@
     </div>
 
   </section>
+  <script type="text/javascript" th:inline="javascript">
+    var disqus_config = function () {
+        this.page.identifier = {{ strings.TrimPrefix .LanguagePrefix .RelPermalink }};
+        this.language = {{ .Lang }};
+    };
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//classicaplus.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+  </script>
 {{ end }}

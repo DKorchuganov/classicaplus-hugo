@@ -52,6 +52,12 @@
             ],
             "additionalProperties": false
         },
+        "timepad": {
+          "title": "TimePad ID",
+          "description": "ID of a TimePad event to buy tickets",
+          "type": "integer",
+          "minimum": 0
+        },
         "performers": {
             "title": "Performers",
             "description": "A list of IDs of the event's performers, should match file names from the data/team folder",
@@ -89,7 +95,7 @@
         }
     },
     "required": [
-        "datetime", "poster", "place", "performers", "programme"
+        "datetime", "poster", "place"
     ],
     "additionalProperties": false
 }
