@@ -1,7 +1,7 @@
 datetime: 2018-12-16T19:30:00
 poster: 
-  small: ClassicaPlus2018.jpeg
-  big: ClassicaPlus2018.jpeg
+  small: paris-poster.jpg
+  big: paris-poster.jpg
 place:
   city: moscow
   hall: artcentre
@@ -16,17 +16,19 @@ performers:
 - sofia.grishina
 - fedor.yarovoy
 programme:
-- composer: pavel.karmanov
-  work: presentformyself
-- composer: pavel.karmanov
-  work: differentrains
-- composer: alexey.kurbatov
-  work: op.32
-- composer: oleg.afanasov
-  work: collisiondetected
-- composer: oleg.paiberdin
-  work: sobout
-- composer: dmitri.kourliandski
-  work: passesimple
-- composer: dmitri.kourliandski
-  work: riotofspring
+- composer: maurice.ravel
+  work: m.19
+- composer: claude.debussy
+  work: l.135
+- composer: darius.milhaud
+  work: op.76
+- composer: francis.poulenc
+  work: fp.100
+- composer: pascal.zavaro
+  work: denshaotoko
+- composer: guillaume.connesson
+  work: disco.toccata
+- composer: guillaume.connesson
+  work: techno.parade
+- composer: guillaume.connesson
+  work: sextett
