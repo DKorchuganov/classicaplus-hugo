@@ -1,0 +1,15 @@
+datetime: 2015-10-21T19:00:00
+poster:
+  small: vienna-assembly-800.jpeg
+  big: vienna-assembly-800.jpeg
+place:
+  city: moscow
+  hall: richter-apartment
+performers:
+  - natalia.zhukova
+  - valeria.esaulenko
+  - eugenia.boginskaya
+programme:
+  - composer: sergey.prokofiev
+    work: op.82
+  
