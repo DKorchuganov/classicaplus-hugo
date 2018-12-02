@@ -1,0 +1,13 @@
+datetime: 2015-11-25T19:00:00
+poster:
+  small: montparnasse-800.jpeg
+  big: montparnasse-800.jpeg
+place:
+  city: moscow
+  hall: pushkin-museum
+performers:
+  - natalia.zhukova
+  - valeria.esaulenko
+programme:
+  - composer: francis.poulenc
+    work: fp.100

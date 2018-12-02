@@ -1,0 +1,13 @@
+datetime: 2015-08-05T19:00:00
+poster:
+  small: music-flowers-600.jpeg
+  big: music-flowers-600.jpeg
+place:
+  city: moscow
+  hall: lutherancathedral
+performers:
+  - natalia.zhukova
+  - valeria.esaulenko
+programme:
+  - composer: sergey.prokofiev
+    work: op.82

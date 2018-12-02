@@ -1,0 +1,14 @@
+datetime: 2015-04-21T19:30:00
+poster:
+  small: fruelingswind-600.jpeg
+  big: fruelingswind-600.jpeg
+place:
+  city: moscow
+  hall: na-kislovke
+performers:
+  - norbert.girlinger
+  - natalia.zhukova
+  - valeria.esaulenko
+programme:
+  - composer: sergey.prokofiev
+    work: op.82

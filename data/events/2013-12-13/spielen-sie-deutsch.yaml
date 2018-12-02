@@ -1,0 +1,14 @@
+datetime: 2013-12-13T19:00:00
+poster:
+  small: spielen-sie-deutsch-600.jpeg
+  big: spielen-sie-deutsch-600.jpeg
+place:
+  city: moscow
+  hall: drh-moskau
+performers:
+  - natalia.zhukova
+  - valeria.esaulenko
+  - eugenia.boginskaya
+programme:
+  - composer: ludwig.beethoven
+    work: op.110

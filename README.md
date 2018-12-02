@@ -2,8 +2,6 @@
 
 [Hugo](https://gohugo.io) source of the [classicaplus.com](http://classicaplus.com) website.
 
-This project is in Work in progress status, the current production site is created using another static site generator.
-
 - [Initial setup](#initial-setup)
 - [Content editing](#content-editing)
   - [Team members](#team-members)
@@ -183,8 +181,8 @@ The event data file contains general information about the event like date of th
 
 The event programme is printed on the event's page in two places:
 
- * as the list of composers (the full names of composers are used)
- * as the list of works (short names of composers are used where available)
+- as the list of composers (the full names of composers are used)
+- as the list of works (short names of composers are used where available)
 
 1. Go to the `data/events` folder, and create a sub-folder of a corresponding date in `YYYY-MM-DD` format (`data/events/2016-04-13`, for example), and then create a file with `event-name.yaml` filename format, where `event-name` is a short name of the event in lowercase.
 2. Add a `datetime` field of the event date and time. The format for the field should be as in the below example.
