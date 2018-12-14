@@ -27,7 +27,7 @@
           <h3 class="title text-center">{{ $name.first }} {{ $name.last }}</h3>
           <h4 class="sub-heading text-center">{{ $instrument }}</h4>
           <img class="img-responsive center-block poster"
-          src="/resources/img{{- strings.TrimPrefix .LanguagePrefix .RelPermalink -}}{{- $member.poster_big -}}"
+          src="{{ printf "/resources/img/team/%s/%s" .File.TranslationBaseName $member.poster.big }}"
           alt="{{ $name.first }} {{ $name.last }} big poster"/>
           {{ .Content }}
         </div>
