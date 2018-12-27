@@ -13,10 +13,10 @@ programme:
   - composer: ludwig.beethoven
     work: op.110
   - composer: richard.strauss
-  - work: op.18
+    work: op.18
   - composer: franz.shubert
-  - work: op.d.821
+    work: op.d.821
   - composer: frank.martin
-  - work: ballade
+    work: ballade
   - composer: daniel.schnyder
-  - work: op.1119
+    work: op.1119
