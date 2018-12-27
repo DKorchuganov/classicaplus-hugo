@@ -7,7 +7,13 @@ place:
   hall: pushkin-museum
 performers:
   - natalia.zhukova
+  - fedor.egorov
   - valeria.esaulenko
+  - danila.lukyanov
+  - maxim.makhonin
+  - fedor.yarovoy
+  - maria.pozhidaeva
+  - elena.tarasova
 programme:
   - composer: francis.poulenc
     work: fp.100
