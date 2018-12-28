@@ -1,0 +1,13 @@
+priority: -1
+name:
+  ru:
+    first: Елена
+    last: Тарасова
+    full: ''
+  en:
+    first: Elena
+    last: Tarasova
+    full: ''
+instrument:
+  ru: фортепиано
+  en: piano

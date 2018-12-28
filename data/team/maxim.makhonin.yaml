@@ -1,0 +1,13 @@
+priority: -1
+name:
+  ru:
+    first: Максим 
+    last: Махонин
+    full: ''
+  en:
+    first: Maxim
+    last: Makhonin
+    full: ''
+instrument:
+  ru: фагот
+  en: basson
