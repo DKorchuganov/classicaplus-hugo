@@ -6,7 +6,7 @@
     {
       "label": "Hugo server",
       "type": "shell",
-      "command": "hugo server",
+      "command": "hugo server --disableFastRender",
       "showInStatusBar": false,
       "problemMatcher": []
     },
