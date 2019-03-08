@@ -1,0 +1,13 @@
+priority: -1
+name:
+  ru:
+    first: Мария
+    last: Пожидаева
+    full: ''
+  en:
+    first: Maria
+    last: Pozhidaeva
+    full: ''
+instrument:
+  ru: сопрано
+  en: soprano

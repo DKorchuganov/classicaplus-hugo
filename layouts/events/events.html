@@ -16,35 +16,33 @@
         {{- end -}}
 
         {{ range $event_scr := sort ($scratch.Get "events") "key" "desc"}}
+          {{- $event_date := $event_scr.date -}}
+          {{- $event_name := $event_scr.name -}}
+          {{- $event := $event_scr.event -}}
+          {{- $event_relpath := (printf "%s/%s" $event_date $event_name) -}}
+          {{ with $events_page.GetPage $event_relpath }}
           <div class="well">
             <div class="row">
-              {{- $event_date := $event_scr.date -}}
-              {{- $event_name := $event_scr.name -}}
-              {{- $event := $event_scr.event -}}
-              {{- $event_relpath := (printf "%s/%s" $event_date $event_name) -}}
-              {{ with $events_page.GetPage $event_relpath }}
-                <div class="col-sm-4 poster">
-                  <a href="{{ .RelPermalink }}">
-                    <img class="img-responsive center-block"
-                         src="{{ printf "/resources/img/events/%s/%s" $event_relpath $event.poster.small }}"
-                         alt="{{ .Description }}"/>
-                  </a>
-                </div>
-                <div class="col-sm-8">
-                  {{- partial "events/event_datetime.html" (dict "lang" .Lang "event" $event "i18n" $.Site.Data.i18n) -}}
-                  <a href="{{ .RelPermalink }}">
-                    <h3 class="title text-center">{{ .Title }}</h3>
-                  </a>
-                  <p class="text-justify main-text">{{ .Description }}</p>
-                  {{- partial "events/event_address.html" (dict "lang" .Lang "event" $event "places" $.Site.Data.places "print_phones" false) -}}
-                  {{- partial "share_buttons.html" (dict "lang" .Lang "title" .Title "desc" .Description) -}}
-                </div>
-              {{ end }}
-
+              <div class="col-sm-4 poster">
+                <a href="{{ .RelPermalink }}">
+                  <img class="img-responsive center-block"
+                        src="{{ printf "/resources/img/events/%s/%s" $event_relpath $event.poster.small }}"
+                        alt="{{ .Description }}"/>
+                </a>
+              </div>
+              <div class="col-sm-8">
+                {{- partial "events/event_datetime.html" (dict "lang" .Lang "event" $event "i18n" $.Site.Data.i18n) -}}
+                <a href="{{ .RelPermalink }}">
+                  <h3 class="title text-center">{{ .Title }}</h3>
+                </a>
+                <p class="text-justify main-text">{{ .Description }}</p>
+                {{- partial "events/event_address.html" (dict "lang" .Lang "event" $event "places" $.Site.Data.places "print_phones" false) -}}
+                {{- partial "share_buttons.html" (dict "lang" .Lang "title" .Title "desc" .Description) -}}
+              </div>
             </div>
           </div>
+          {{ end }}
         {{ end }}
-
       </div>
     </div>
   </section>
