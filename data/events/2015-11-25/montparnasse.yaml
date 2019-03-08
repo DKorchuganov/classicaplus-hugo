@@ -7,7 +7,23 @@ place:
   hall: pushkin-museum
 performers:
   - natalia.zhukova
+  - fedor.egorov
   - valeria.esaulenko
+  - daniel.lukyanov
+  - maxim.makhonin
+  - fedor.yarovoy
+  - maria.pozhidaeva
+  - elena.tarasova
 programme:
+  - composer: erik.satie
+    work: op.1920.lbe 
   - composer: francis.poulenc
     work: fp.100
+  - composer: jean.wiener
+    work: septpetitehistoires
+  - composer: darius.milhaud
+    work: op.76
+  - composer: germaine.tailleferre
+    work: fandango
+  - composer: jean.francaix
+    work: berger
