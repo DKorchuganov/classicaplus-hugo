@@ -1,7 +1,7 @@
 place:
   city: moscow
   hall: domzhur
-datetime: 2012-04-24 19:30:00 +0000
+datetime: 2012-04-24T19:30:00Z
 poster:
   small: 5sonat-600.jpeg
   big: 5sonat-600.jpeg

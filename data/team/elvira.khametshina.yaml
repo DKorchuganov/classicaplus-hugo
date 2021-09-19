@@ -1,0 +1,14 @@
+priority: -1
+poster:
+  small: natalia.zhukova-small700.jpg
+  big: natalia.zhukova-big700.jpg
+name:
+  ru:
+    first: Эльвира
+    last: Хаметшина
+  en:
+    first: Elvira
+    last: Khametshina
+instrument:
+  ru: скрипка
+  en: violin
