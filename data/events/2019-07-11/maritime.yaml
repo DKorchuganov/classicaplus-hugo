@@ -1,21 +1,17 @@
-datetime: 2019-03-21T19:30:00Z
+datetime: 2019-07-11T19:00:00Z
 poster: 
-  small: paris-poster.jpg
-  big: paris-poster.jpg
+  small: maritime-poster.jpg
+  big: maritime-poster.jpg
 place:
   city: moscow
-  hall: artcentre
-timepad: 897144
+  hall: englishcourt
 performers:
 - valeria.esaulenko
 - natalia.zhukova
 - eugenia.boginskaya
-- nadezhda.artamonova
-- daniel.lukyanov
 - daria.demidova
-- ilia.ganichev
-- sofia.grishina
-- fedor.yarovoy
+- nikita.budnetsky
+- elvira.khametshina
 programme:
 - composer: claude.debussy
   work: l.129

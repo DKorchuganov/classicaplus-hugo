@@ -1,0 +1,15 @@
+name:
+  ru: 'Старый Английский двор'
+  en: 'Old English Court'
+address:
+  ru: 'ул. Варварка, дом 4а (метро «Китай-город», «Охотный ряд»)'
+  en: 'Varvarka Street 4a'
+phones:
+  - desc:
+      ru: 'Справки по телефону'
+      en: 'Contacts'
+    numbers:
+      - url: '+79258887023'
+        disp: '(925) 888-70-23'
+      - url: '+74956060353'
+        disp: '(495) 606-03-53'
