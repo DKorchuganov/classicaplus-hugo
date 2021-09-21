@@ -51,8 +51,14 @@
                         <a href="{{ printf "/%s/team/%s" $lang $perf_id }}">
                           {{- printf "%s %s, %s" $perf_name.first $perf_name.last $perf_inst -}}
                         </a>
-                      </li>                    
-                    {{ else }}                  
+                      </li>
+                    {{ else if isset $performer "url" }}
+                      <li>
+                        <a href="{{ printf "/%s/team/%s" $lang $performer.url }}">
+                          {{- printf "%s %s, %s" $perf_name.first $perf_name.last $perf_inst -}}
+                        </a>
+                      </li>           
+                    {{ else }}                 
                       <li>{{ printf "%s %s, %s" $perf_name.first $perf_name.last $perf_inst }}</li>
                     {{ end }}
                   {{- else -}}

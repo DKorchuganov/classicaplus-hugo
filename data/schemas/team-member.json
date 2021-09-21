@@ -9,6 +9,11 @@
             "description": "Priority for ordering on the Team page, ascending. Negative priority removes from the page",
             "type": "integer"
         },
+        "url": {
+            "title": "URL",
+            "description": "Optional URL slug to the Team page.",
+            "type": "string"
+        },
         "poster": {
             "title": "Poster",
             "description": "File names for the team member's posters. The files should be stored under /static/resources/img/team/<person.id>",

@@ -1,15 +1,14 @@
-priority: -1
-url: valeria.prokusheva
+priority: 3
 poster:
   small: valeria.esaulenko-small700.jpg
   big: valeria.esaulenko-big700.jpg
 name:
   ru:
     first: Валерия
-    last: Есауленко
+    last: Прокушева
   en:
     first: Valeria
-    last: Esaulenko
+    last: Prokusheva
 instrument:
   ru: фортепиано
   en: piano
