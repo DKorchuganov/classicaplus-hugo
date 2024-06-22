@@ -17,7 +17,7 @@
 
         {{- range $item := .Site.Menus.main -}}
           {{ $lang_url := $item.URL | relLangURL }}
-          {{- if eq (string $context.URL) (string $lang_url) -}}
+          {{- if eq (string $context.RelPermalink) (string $lang_url) -}}
             <li class="active">
               <p class="navbar-text">{{ $item.Name }}</p>
             </li>
@@ -37,7 +37,7 @@
             {{- range $page := .AllTranslations -}}
               {{- if not (eq $page.Lang $context.Lang) }}
               <li>
-                <a href="{{ $page.URL }}">{{ $page.Language.LanguageName }}</a>
+                <a href="{{ $page.RelPermalink }}">{{ $page.Language.LanguageName }}</a>
               </li>
               {{ end -}}
             {{ end }}

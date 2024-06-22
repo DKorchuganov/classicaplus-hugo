@@ -139,7 +139,7 @@
   </section>
   <script type="text/javascript" th:inline="javascript">
     var disqus_config = function () {
-        this.page.identifier = {{ strings.TrimPrefix .LanguagePrefix .RelPermalink }};
+        this.page.identifier = {{ strings.TrimPrefix .Site.LanguagePrefix .RelPermalink }};
         this.language = {{ .Lang }};
     };
     (function() {  // DON'T EDIT BELOW THIS LINE
